@@ -1,0 +1,15 @@
+<div class="background2">
+    <h2>My Skills</h2>
+    <div class="skill-container">
+        <div *ngFor="let skill of skills; let i = index">
+            <div class="skills">
+                <div class="icon-circ">
+                    <img src="assets/img/icons/{{skill.icon}}.png">
+                </div>              
+                <div>
+                    <div>{{skill.name}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

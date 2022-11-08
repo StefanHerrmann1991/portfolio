@@ -1,0 +1,20 @@
+<div class="main">
+    <div class="about-me">
+        <img src="assets/img/profile/roundPicture.jpg">
+        <div>
+            <h2>About me</h2>
+            <div class="center-self">"I'm a studied biotechnologist and a passionate front end developer<br> who loves finding solutions."</div>
+        </div>
+    </div>
+    <div class="journey-container">
+        <div *ngFor="let journey of journeys">
+            <div class="journey">
+                <div> {{journey.img}} </div>
+                <div class="center">
+                    <div> {{journey.title}} </div>
+                    <div> {{journey.text}} </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
