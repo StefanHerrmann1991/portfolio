@@ -12,17 +12,19 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  project: any[] = [
+  projects: any[] = [
     {
       'name': 'El Pollo Loco',
-      'path': 'htmlCss',
-      'img': '',
+      'path': 'https://stefan-herrmann.developerakademie.net/ElPolloLoco',
+      'img': 'assets/img/projects/El Polo Loco.png',
       'language': 'JavaScript'
     },
     {
       'name': 'Join',
-      'path': 'htmlCss',
-      'img': '',
+      'path': 'https://stefan-herrmann.developerakademie.net/join/index.html',
+      'img': 'assets/img/projects/join.png',
       'language': 'JavaScript'
     }]
 }
+
+

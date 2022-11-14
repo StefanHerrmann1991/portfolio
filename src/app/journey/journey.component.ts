@@ -13,21 +13,21 @@ export class JourneyComponent implements OnInit {
   }
 
   journeys = [{
-    'img': '',
+    'img': 'walk-line',
     'title': 'I STARTED',
     'text': 'as a master of science I learned how to think analytical and structured. Often I thought that most problems could be solved much better with algorithms.'
   }, {
-    'img': '',
+    'img': 'search-line',
     'title': 'MY RESEARCH',
-    'text': 'was mostly about explosives, cellculture and the immunological testing. The best part for me was sitting in front of the pc and the statical evaluation and discussion of my data.'
+    'text': 'was mostly about explosives, cellculture and immunological testing. The best part for me was sitting in front of the pc and the statistical evaluation and discussion of my data.'
   }, {
-    'img': '',
+    'img': 'heart-line',
     'title': 'THE FASCINATION',
-    'text': 'for tech was always a part of my life. When I was twelve I repaired the pc of my parents the first time. When friends have technical problems I am the person to solve it.'
+    'text': 'for tech was always a part of my life. When friends have technical problems I am the person to solve it.'
   }, {
-    'img': '',
+    'img': 'flight-takeoff-line',
     'title': 'MY JOURNEY',
-    'text': 'after trying to learn coding by myself with "karel the robot", "Python" and "FreeCodeCamp" I dicided to enroll at the Developer Akademie. I wanted to create high quality code, reviewed by professionel developers. Coding combines every aspect I like about researching but its way faster.'
+    'text': 'after trying to learn coding by myself I dicided to enroll at the Developer Akademie. I wanted to create high quality code, reviewed by professionel developers. Coding combines every aspect I like about researching but its way faster.'
   }]
 
 

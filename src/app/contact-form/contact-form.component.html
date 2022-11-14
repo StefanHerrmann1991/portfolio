@@ -1,6 +1,19 @@
-<form  (submit)="sendMail()" ngNativeValidate #myForm>
-<input required type="text" #nameField>
-<input required type="text" #emailField>
-<input required type="text" #messageField>
-<button #sendButton>Senden</button>
-</form>
+<div class="main">
+    <div>
+        <h2>Contact me</h2>
+        <div>Get in touch via the form below, or by sending an E-mail to stefan-herrmann@posteo.de</div>
+    </div>
+    <form (submit)="sendMail()" ngNativeValidate #myForm>
+        <div>
+            <div>Name</div>
+            <input required type="text" #nameField placeholder="Enter your name">
+            <div>Email-address</div>
+            <input required type="text" #emailField placeholder="Enter your Email address">
+            <div>Message</div>
+            <textarea required type="text" #messageField placeholder="Enter your message"></textarea>
+        </div>
+        <div class="btn-container"> 
+            <button class="send-btn" #sendButton>Send</button>
+        </div>
+    </form>
+</div>

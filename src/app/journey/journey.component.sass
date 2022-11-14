@@ -1,20 +1,19 @@
-$primary: #fa2759
-$secondary: #2dfcd8
-$gray: #1a1a1a
-$background: #131111
-$box-shadow: 0px 4px 4px rgba(197, 197, 197, 0.25)
+@import '../../styles.sass'
 
-img
+.profile-pic
     background-color: black
     width: 209px
     height: 209px
     border-radius: 50%
+    padding: 0px
 
 .about-me
+    padding-top: $pdg
+    padding-bottom: $pdg
     display: flex
-    justify-content: space-around
+    justify-content: space-evenly
     align-items: center
-    border-bottom: 1px solid #secondary
+   
 
 .main
     background-color: $background
@@ -26,21 +25,34 @@ div
 .journey-container
     display: flex
     flex-direction: row
+    padding-left: $pdg 
+    padding-right: $pdg 
 
 .journey
+    padding-top: $pdg
     display: flex
     justify-content: center
+    flex-direction: column
+    align-items: center
+
 
 .center
     display: flex
     align-items: center
     flex-direction: column
-   
-    justify-content: flex-start   
 
-    div 
+    justify-content: flex-start
+
+    div
         text-align: center
         padding: 20px
 
-.center-self 
+.center-self
     text-align: center
+
+img
+    background-color: #2dfcd8
+    height: 40px
+    width: 40px
+    border-radius: 50%
+    padding: 20px

@@ -1,7 +1,4 @@
-$primary: #fa2759
-$secondary: #2dfcd8
-$gray: #1a1a1a
-$background2: #131111
+@import '../../styles.sass'
 
 span
     color: $primary
@@ -9,18 +6,18 @@ span
 .main
     height: 777px
     background-color: black
+    padding: $pdg
     display: flex
-    justify-content: space-around
     align-items: center
+    flex-direction: column
+    justify-content: space-between
     h1
         color: white
 
 .contact-btn
-
+    margin-top: $pdg
     width: 300px
     height: 78px
-    top: 481px
-    left: 125px
     font-size: 18px
     background-color: black
     padding: 0
@@ -34,7 +31,12 @@ span
     left: 119px
     font-weight: 700
 
-img
+.introduction-container
+    display: flex
+    justify-content: space-around !important
+    align-self: stretch
+  
+.profile-img
     background-color: black
     height: 360px
     width: 360px

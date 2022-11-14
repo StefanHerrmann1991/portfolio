@@ -1,8 +1,20 @@
 <div class="main">
     <h2>My Work</h2>
     <div class="lang-btn">
-        <button>All</button>
-        <button>Angular</button>
-        <button>JavaScript</button>
+        <div>
+            <button>All</button>
+            <button>Angular</button>
+            <button>JavaScript</button>
+        </div>
+        <div class="projects">
+            <div *ngFor="let project of projects">
+                <div>
+                    <a class="project-img" href="{{project.path}}">
+                        <div class="project-name">{{project.name}}</div>
+                        <img src="{{project.img}}">
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

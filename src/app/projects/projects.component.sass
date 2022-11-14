@@ -1,7 +1,8 @@
-@import url(../styles.sass)
+@import '../../styles.sass'
 
 .main
     background-color: black
+    padding-bottom: $pdg
 
 .lang-btn button
     border: solid 2px $primary
@@ -12,8 +13,28 @@
 
 .lang-btn
     display: flex
-    justify-content: center
     align-items: center
+    flex-direction: column
 
 .lang-btn-filled
     background-color: white
+
+img
+    width: 442px
+    heigth: 367px
+    margin-left: 45px
+
+.project-img
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    color: white
+
+.project-name
+    position: absolute
+
+
+.projects
+    display: flex
+    flex-direction: row
