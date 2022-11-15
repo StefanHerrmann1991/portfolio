@@ -13,7 +13,10 @@
     justify-content: center
 
 .skill-animation
-     animation: .4s cubic-bezier(.25, .25, .25, 1.25) both fade-in
+    animation: 1s linear both fade-in
+
+@scroll-timeline progress-timeline
+    time-range: 2s
 
 .skill
     margin: 30px
@@ -57,4 +60,4 @@ $tile-bg: #cfcfdf
 @for $i from 1 through 8
     .skill-animation
         &:nth-child(#{$i})
-          animation-delay: $i * 0.1s
+            animation-delay: $i * 0.1s
