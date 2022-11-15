@@ -12,12 +12,6 @@
     flex-wrap: wrap
     justify-content: center
 
-.skill-animation
-    animation: fade-in 2s linear both
-    animation-timeline: progress-timeline
-
-@scroll-timeline progress-timeline
-    time-range: 2s
    
 
 .skill
@@ -50,15 +44,9 @@
 
 $tile-bg: #cfcfdf
 
-@keyframes fade-in
-    0%
-        opacity: 0
-        transform: translateX(50%) scale(0) rotateZ(-60deg)
-    100%
-        opacity: 1
-        transform: translateX(0) scale(1) rotateZ(0deg)
+
 
 @for $i from 1 through 8
-    .skill-animation
+    .skill
         &:nth-child(#{$i})
             animation-delay: $i * 0.1s

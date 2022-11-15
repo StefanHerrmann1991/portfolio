@@ -1,9 +1,9 @@
 <div class="main">
     <h2>My Skills</h2>
     <div class="skill-container">
-        <div id="skillAnimation" class="skill-animation" *ngFor="let skill of skills; let i = index">
-            <div class="skills">
-                <div class="skill">
+        <div  class="skill-animation" *ngFor="let skill of skills; let i = index">
+         
+                <div class="skill" data-aos="fade-up-left">
                     <div class="icon-circ">
                         <img src="assets/img/icons/{{skill.icon}}.png">
                     </div>
@@ -11,7 +11,7 @@
                         <div>{{skill.name}}</div>
                     </div>
                 </div>
-            </div>
+           
         </div>
     </div>
 </div>
