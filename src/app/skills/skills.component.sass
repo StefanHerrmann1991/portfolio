@@ -13,10 +13,12 @@
     justify-content: center
 
 .skill-animation
-    animation: 1s linear both fade-in
+    animation: fade-in 2s linear both
+    animation-timeline: progress-timeline
 
 @scroll-timeline progress-timeline
     time-range: 2s
+   
 
 .skill
     margin: 30px
@@ -52,7 +54,6 @@ $tile-bg: #cfcfdf
     0%
         opacity: 0
         transform: translateX(50%) scale(0) rotateZ(-60deg)
-
     100%
         opacity: 1
         transform: translateX(0) scale(1) rotateZ(0deg)
