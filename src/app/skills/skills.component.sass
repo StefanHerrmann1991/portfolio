@@ -1,15 +1,21 @@
 @import '../../styles.sass'
-    
-.main 
-    padding: $pdg
+
+.main
+    padding-left: $pdg
+    padding-right: $pdg
     background: $background
+    padding-top: $pdg
+    padding-bottom: $pdg
 
 .skill-container
     display: flex
     flex-wrap: wrap
     justify-content: center
 
-.skills
+.skill-animation
+     animation: .4s cubic-bezier(.25, .25, .25, 1.25) both fade-in
+
+.skill
     margin: 30px
     display: flex
     justify-content: center
@@ -20,7 +26,6 @@
     height: 120px
     border-radius: 6px
     position: relative
-   
 
 .icon-circ
     border-radius: 50%
@@ -37,3 +42,19 @@
     img
         width: 14px
         height: 17px
+
+$tile-bg: #cfcfdf
+
+@keyframes fade-in
+    0%
+        opacity: 0
+        transform: translateX(50%) scale(0) rotateZ(-60deg)
+
+    100%
+        opacity: 1
+        transform: translateX(0) scale(1) rotateZ(0deg)
+
+@for $i from 1 through 8
+    .skill-animation
+        &:nth-child(#{$i})
+          animation-delay: $i * 0.1s
