@@ -5,11 +5,11 @@
     </div>
     <form (submit)="sendMail()" ngNativeValidate #myForm>
         <div>
-            <div>Name</div>
+            <div>Name<span>*</span></div>
             <input required type="text" #nameField placeholder="Enter your name">
-            <div>Email-address</div>
+            <div>Email-address<span>*</span></div>
             <input required type="text" #emailField placeholder="Enter your Email address">
-            <div>Message</div>
+            <div>Message<span>*</span></div>
             <textarea required type="text" #messageField placeholder="Enter your message"></textarea>
         </div>
         <div class="btn-container"> 

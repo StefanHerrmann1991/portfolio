@@ -25,17 +25,42 @@ img
     heigth: 367px
     margin-left: 45px
 
+.project-name
+    position: absolute
+    z-index: 100
+    background-color: black
+
 .project-img
     position: relative
     display: flex
     justify-content: center
     align-items: center
-    color: white
 
-.project-name
-    position: absolute
+.hide
+    display: none
 
+div:hover + .hide
+    display: block  
+    color: white   
 
 .projects
     display: flex
-    flex-direction: row
+    align-items: center
+
+.language button
+    transition: background-color 0.6s linear
+    &:hover
+        background-color: $primary
+        color: white
+
+.hide 
+  display: none
+
+.myDIV
+    color: white
+    z-index: 100
+
+.myDIV:hover + .hide
+  display: block
+  color: red
+  font-size: 24px

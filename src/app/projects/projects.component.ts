@@ -12,7 +12,7 @@ export class ProjectsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-   AOS.init();
+    AOS.init();
   }
 
   projects: any[] = [
@@ -27,7 +27,13 @@ export class ProjectsComponent implements OnInit {
       'path': 'https://stefan-herrmann.developerakademie.net/join/index.html',
       'img': 'assets/img/projects/join.png',
       'language': 'JavaScript'
-    }]
+    }, {
+      'name': 'Portfolio',
+      'path': '',
+      'img': '',
+      'language': 'Angular'
+    }
+  ]
 }
 
 

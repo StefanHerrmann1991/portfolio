@@ -1,20 +1,21 @@
 <div class="main" id="projects">
     <h2 data-aos="fade-up" data-aos-duration="3000">My Work</h2>
     <div class="lang-btn">
-        <div>
-            <button>All</button>
-            <button>Angular</button>
-            <button>JavaScript</button>
+        <div class="language">
+            <button data-aos="slide-up">All</button>
+            <button data-aos="slide-down">Angular</button>
+            <button data-aos="slide-up">JavaScript</button>
         </div>
-        <div class="projects">
+        <div class="projects" data-aos="zoom-in-up">
             <div *ngFor="let project of projects">
-                <div>
+                <div class="each-project">
                     <a class="project-img" href="{{project.path}}">
-                        <div class="project-name">{{project.name}}</div>
-                        <img src="{{project.img}}">
+                        <div class="myDIV"><img  src="{{project.img}}"></div>
+                        <div class="hide project-name">{{project.name}}</div>
                     </a>
                 </div>
             </div>
         </div>
     </div>
+    
 </div>

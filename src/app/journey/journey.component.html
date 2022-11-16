@@ -1,7 +1,7 @@
 <div class="main" id="journey">
     <div class="about-me">
-        <img class="profile-pic" src="assets/img/profile/roundPicture.jpg">
-        <div>
+        <img data-aos="slide-right" class="profile-pic" src="assets/img/profile/roundPicture.jpg">
+        <div data-aos="slide-left">
             <h2>About me</h2>
             <div class="center-self">"I'm a studied biotechnologist and a passionate front end developer<br> who loves finding solutions."</div>
         </div>
@@ -9,10 +9,10 @@
     <div class="journey-container">
         <div *ngFor="let journey of journeys">
             <div class="journey">
-                <div> <img src="assets/img/icons/{{journey.img}}.png"> </div>
+                <div data-aos="fade-up"> <img src="assets/img/icons/{{journey.img}}.png"> </div>
                 <div class="center">
-                    <div> {{journey.title}} </div>
-                    <div> {{journey.text}} </div>
+                    <div data-aos="fade-up-right"> {{journey.title}} </div>
+                    <div data-aos="fade-up-left"> {{journey.text}} </div>
                 </div>
             </div>
         </div>
