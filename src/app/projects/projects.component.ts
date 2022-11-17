@@ -9,14 +9,12 @@ import AOS from 'aos';
 })
 export class ProjectsComponent implements OnInit {
 
-  showTitle: boolean = false;
+  showTitle: number = -1;
   constructor() {
     
   }
 
-  hoverOver() {   
-    this.showTitle = !this.showTitle;
-  }
+ 
 
   ngOnInit(): void {
     AOS.init();
