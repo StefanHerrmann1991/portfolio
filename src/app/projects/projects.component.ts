@@ -9,7 +9,14 @@ import AOS from 'aos';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  showTitle: boolean = false;
+  constructor() {
+    
+  }
+
+  hoverOver() {   
+    this.showTitle = !this.showTitle;
+  }
 
   ngOnInit(): void {
     AOS.init();
@@ -30,10 +37,13 @@ export class ProjectsComponent implements OnInit {
     }, {
       'name': 'Portfolio',
       'path': '',
-      'img': '',
+      'img': 'assets/img/projects/portfolio.jpg',
       'language': 'Angular'
     }
   ]
+
+
+
 }
 
 
