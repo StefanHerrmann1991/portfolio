@@ -8,13 +8,15 @@ import AOS from 'aos';
   styleUrls: ['./projects.component.sass']
 })
 export class ProjectsComponent implements OnInit {
+  console = console;
+  actualProject: string;
 
   showTitle: number = -1;
   constructor() {
-    
+
   }
 
- 
+
 
   ngOnInit(): void {
     AOS.init();
@@ -39,9 +41,17 @@ export class ProjectsComponent implements OnInit {
       'language': 'Angular'
     }
   ]
-
-
-
+  showProjects(project: string) {
+    
+    if (project == 'Angular')
+      this.actualProject = 'Angular';
+    if (project == 'JavaScript')
+      this.actualProject = 'JavaScript';
+    if (project == 'All')
+      this.actualProject = 'All';
+      this.console.log(this.actualProject, project);
+  }
+  
 }
 
 
