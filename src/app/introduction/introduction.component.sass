@@ -31,14 +31,6 @@ span
         width: 100%
         height: 100%
 
-.introduction-sentence
-
-    color: white
-    height: 278px
-    top: 144px
-    left: 119px
-    font-weight: 700
-
 .introduction-container
     display: flex
     justify-content: space-around !important
@@ -49,3 +41,66 @@ span
     height: 360px
     width: 360px
     border-radius: 50%
+
+
+@media (max-width: $mobile) 
+
+
+.main
+    height: 70vh
+    background-color: black
+    padding: $s
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: space-between
+    h1
+        color: white
+
+.contact-btn
+    margin-top: 100px
+    width: 80%
+    height: 6vh
+    font-size: 18px
+    background-color: black
+    padding: 0
+    border: solid 2px $secondary
+    transition: background-color 0.6s linear
+    &:hover
+        background-color: $secondary
+        a
+            color: black
+    a
+        width: 100%
+        height: 100%
+
+
+.introduction-container
+    display: flex
+    align-items: center
+    flex-direction: column-reverse
+    justify-content: center !important
+
+.profile-img
+    background-color: black
+    height: 250px
+    width: 250px
+    border-radius: 50%
+
+h1
+    font-size: 20px
+    justify-content: center
+    align-self: center
+    padding-top: $l
+    width: 100%
+    
+
+.arrowDown
+    display: none
+
+
+.discription
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
