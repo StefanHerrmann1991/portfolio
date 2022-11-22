@@ -39,11 +39,22 @@ html
             justify-content: center
             align-items: center
             position: absolute
-            top: 150px
+            top: 64px
+            left: 0px
             background-color: black
             width: 100%
-            .menu-item
-                border-bottom: 1px solid white
+            z-index: 100
+            padding: 0px
+            a
+                color: white
+                border-bottom: 0.2px solid rgba(255, 255, 255, 0.5)
+                margin: 0px
+                padding: $s
+                width: 100%
+                display: flex
+                justify-content: center
+       
+
 
 .burger
     border: none
@@ -57,8 +68,8 @@ html
 
 @media (max-width: $mobile)
     .header
-        padding-top: $l
-        padding-bottom: $l
+        padding-top: $s
+        padding-bottom: $s
         padding-right: $s
         padding-left: $s
         img
