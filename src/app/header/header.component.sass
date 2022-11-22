@@ -1,10 +1,14 @@
 @import '../../styles.sass'
-    
+
 html
     background-color: black
 
+.costom
+    background-color: black
+    color: white
+    font-size: 200%
 
-.header 
+.header
     padding-top: $xxl
     padding-bottom: $xxl
     padding-right: $pdg
@@ -13,16 +17,50 @@ html
     display: flex
     justify-content: space-between
     align-items: center
-   
+
     img
         height: 60px
         width: 60px
-    a 
+    a
         margin-left: 15px
 
         &:hover
             color: $primary
 
-
-.logo 
+.logo
     cursor: pointer
+
+.menu
+    @media (max-width: $mobile)
+        display: none
+        &.is-open
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            position: absolute
+            top: 150px
+            background-color: black
+            width: 100%
+            .menu-item
+                border-bottom: 1px solid white
+
+.burger
+    border: none
+    background-color: black
+    display: none
+    @media (max-width: $mobile)
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+
+@media (max-width: $mobile)
+    .header
+        padding-top: $l
+        padding-bottom: $l
+        padding-right: $s
+        padding-left: $s
+        img
+            height: 40px
+            width: 40px

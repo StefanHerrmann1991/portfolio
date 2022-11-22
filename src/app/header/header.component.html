@@ -1,11 +1,9 @@
 <div class="header">
     <img class="logo" routerLink="/" src="assets/img/profile/logo.png">
     <button class="burger" (click)="toggleMenu()">
-        <mat-icon class="material-icons">{{ isMenuOpen ? "close" : "menu"}}</mat-icon>     
-
+        <mat-icon appearance="outline" class="material-icons costom">{{ isMenuOpen ? "close" : "menu"}}</mat-icon>     
     </button>
-    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home">home</mat-icon>
-    <div>
+    <div class="menu" [class.is-open]="isMenuOpen">
         <a routerLink="/">HOME</a>
         <a href="#journey">ABOUT</a>
         <a href="#projects">PROJECTS</a>        
