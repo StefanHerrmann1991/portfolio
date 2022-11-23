@@ -12,7 +12,8 @@ import { FormsModule }   from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
-import { MatIconModule } from '@angular/material/icon'; 
+import { MatIconModule } from '@angular/material/icon';
+import { HiddenDirective } from './hidden.directive'; 
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MatIconModule } from '@angular/material/icon';
     JourneyComponent,
     ContactFormComponent,
     FooterComponent,
-    LegalNoticeComponent
+    LegalNoticeComponent,
+    HiddenDirective
   ],
   imports: [
     BrowserModule,
