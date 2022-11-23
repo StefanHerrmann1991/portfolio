@@ -19,7 +19,7 @@ export class JourneyComponent implements OnInit {
   journeys = [{
     'img': 'walk-line',
     'title': 'I STARTED',
-    'text': 'as a master of science I learned how to think analytical and structured. Often I thought that most problems could be solved much better with algorithms.'
+    'text': 'programming during my master. When I studied Life Science Engineering I learned how to think analytical and structured. Often I thought that most problems could be solved much better with algorithms.'
   }, {
     'img': 'search-line',
     'title': 'MY RESEARCH',

@@ -1,15 +1,16 @@
 <div class="main" id="projects">
     <h2 data-aos="fade-up" data-aos-duration="3000">My Work</h2>
     <div class="lang-btn">
-        <div class="language">
-            <button (click)="showProjects('All')" data-aos="slide-up">All</button>
-            <button (click)="showProjects('Angular')" data-aos="slide-down">Angular</button>
-            <button (click)="showProjects('JavaScript')"data-aos="slide-up">JavaScript</button>
+        <div data-aos="zoom-in-up"  class="language">
+            <button (click)="showProjects('All')" >All</button>
+            <button (click)="showProjects('Angular')" >Angular</button>
+            <button (click)="showProjects('JavaScript')">JavaScript</button>
         </div>
         <div class="projects" data-aos="zoom-in-up">
             <div *ngFor="let project of projects; let i = index">
                 <div class="each-project" [ngClass]="{'d-none': actualProject == project.language}">
-                    <a class="project-img" href="{{ project.path }}" (mouseover)="showTitle=i"  (mouseout)="showTitle=-1">
+                    <a [attr.data-aos-delay]="150 * i" class="project-img" href="{{ project.path }}"
+                        (mouseover)="showTitle=i" (mouseout)="showTitle=-1">
                         <div><img src="{{ project.img }}"></div>
                         <div [ngClass]="showTitle == i ? '' : 'showTitle'" class="project-name">{{ project.name }}</div>
                     </a>
