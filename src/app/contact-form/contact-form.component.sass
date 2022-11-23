@@ -53,16 +53,50 @@ textarea
         font-family: 'Inter', sans-serif
         color: #989898
 
-
-span 
+span
     color: $primary
 
-input:focus 
-    outline: none !important           
-    border:1px solid $primary
+input:focus
+    outline: none !important
+    border: 1px solid $primary
     box-shadow: 0 0 10px $secondary
 
-textarea:focus 
-    outline: none !important           
-    border:1px solid $primary
+textarea:focus
+    outline: none !important
+    border: 1px solid $primary
     box-shadow: 0 0 10px $secondary
+
+@media (max-width: $mobile)
+
+    div
+        padding: 6px
+
+    .main
+        background-color: $background
+        padding: 0px
+        h2
+            padding-bottom: 0px
+            display: flex
+            justify-content: flex-start
+    .email
+        color: $secondary
+
+    textarea 
+        width: 86%
+
+    input 
+        width: 86%
+    
+    .send-btn
+        width: 128px
+        height: 60px
+        margin-top: 0px        
+
+    form
+        width: 100%
+        
+    
+    div 
+        padding-top: $m
+        padding-bottom: $s
+    
