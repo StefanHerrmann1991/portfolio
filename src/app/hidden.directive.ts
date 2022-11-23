@@ -6,8 +6,6 @@ import { Directive, ElementRef } from '@angular/core';
 export class HiddenDirective {
 
   constructor(private element: ElementRef) {
-    console.log(this.element);
     this.element.nativeElement.classList.add('hidden');
   }
-
 }
