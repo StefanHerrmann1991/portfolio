@@ -9,18 +9,34 @@ input
         font-family: 'Inter', sans-serif
         color: #989898
 
+.contact
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    width: 100%
+    div
+        width: 90%
+ 
+
+
 .main
     background-color: black
     display: flex
-    justify-content: center
     flex-direction: column
     align-items: center
+    justify-content: center
     padding-bottom: $pdg
     padding-top: $pdg
+    h2
+        display: flex
+        align-self: flex-start
+        padding-bottom: $m
 
 div
     color: white
-    padding: 20px
+    padding-top: $m
+    padding-bottom: $s
 
 h2
     color: $secondary
@@ -53,6 +69,9 @@ textarea
         font-family: 'Inter', sans-serif
         color: #989898
 
+form
+    width: 100%
+
 span
     color: $primary
 
@@ -74,6 +93,7 @@ textarea:focus
     .main
         background-color: $background
         padding: 0px
+        padding-bottom: $l
         h2
             padding-bottom: 0px
             display: flex
@@ -81,22 +101,17 @@ textarea:focus
     .email
         color: $secondary
 
-    textarea 
+    textarea
         width: 86%
 
-    input 
+    input
         width: 86%
-    
+
     .send-btn
         width: 128px
         height: 60px
-        margin-top: 0px        
+        margin-top: 0px
 
-    form
-        width: 100%
-        
-    
-    div 
+    div
         padding-top: $m
         padding-bottom: $s
-    
