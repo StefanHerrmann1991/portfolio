@@ -39,7 +39,7 @@ export class SkillsComponent implements OnInit {
       'icon': 'api'
     }
     , {
-      'name': 'Design thinking',
+      'name': 'Design Thinking',
       'icon': 'designThinking'
     }
     , {

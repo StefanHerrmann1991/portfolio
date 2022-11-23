@@ -55,6 +55,35 @@ img
 .showTitle
     display: none
 
-
 .d-none
     display: none
+
+@media (max-width: $mobile)
+
+    h2
+        padding: 0px
+
+    .language button
+        height: 50px
+        width: 90px
+        padding: 0px
+        margin: 0px 
+        margin-top: $xl
+        margin-bottom: $xl 
+        &:nth-child(2)
+            margin-left: $s
+            margin-right: $s
+
+    
+
+    .main
+       padding-top: $xl
+
+    .each-project div img
+        width: 275px
+        margin-left: 0px
+        margin-top: $l
+
+    .projects 
+        justify-content: center
+        flex-direction: column
