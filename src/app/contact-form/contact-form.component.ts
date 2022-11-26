@@ -20,7 +20,6 @@ export class ContactFormComponent implements OnInit {
   }
 
   async sendMail() {
-    console.log('sending mail')
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
@@ -34,7 +33,7 @@ export class ContactFormComponent implements OnInit {
     fd.append('name', nameField.value)
     fd.append('email', emailField.value)
     fd.append('message', messageField.value)
-    await fetch('http://stefan-herrmann.developerakademie.net/send_mail/send_mail.php',
+    await fetch('https://stefan-herrmann.developerakademie.net/send_mail/send_mail.php',
       {
         method: 'POST',
         body: fd
