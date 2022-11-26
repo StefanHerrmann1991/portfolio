@@ -5,18 +5,19 @@ input
     width: 610px
     padding: 10px
     text-indent: 10px
+    color: white
     &::placeholder
         font-family: 'Inter', sans-serif
         color: #989898
 
 .email-contact
+    padding-left: $m
 
 .contact
     display: flex
     justify-content: center
     align-items: center
     flex-direction: column
-    width: calc( 100% - $pdg )
     div
         width: 90%
 
@@ -67,10 +68,10 @@ textarea
     font-family: inter,sans-serif
     text-indent: 10px
     font-size: 14px
-    color: #989898
+    color: white
     &:placeholder
         font-family: 'Inter', sans-serif
-        color: #989898
+        color: white
 
 form
     width: 100%
@@ -87,6 +88,16 @@ textarea:focus
     outline: none !important
     border: 1px solid $primary
     box-shadow: 0 0 10px $secondary
+
+@media (max-width: $tablet)
+
+    textarea
+        width: 100%
+
+    input
+        width: 100%
+
+
 
 @media (max-width: $mobile)
 
@@ -115,3 +126,6 @@ textarea:focus
     div
         padding-top: $m
         padding-bottom: $s
+        padding-left: 0px
+
+

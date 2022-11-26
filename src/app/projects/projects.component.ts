@@ -37,16 +37,16 @@ export class ProjectsComponent implements OnInit {
     }, {
       'name': 'Portfolio',
       'path': '',
-      'img': 'assets/img/projects/portfolio.jpg',
+      'img': 'assets/img/projects/portfolio.png',
       'language': 'Angular'
     }
   ]
   showProjects(project: string) {
     
     if (project == 'Angular')
-      this.actualProject = 'Angular';
-    if (project == 'JavaScript')
       this.actualProject = 'JavaScript';
+    if (project == 'JavaScript')
+      this.actualProject = 'Angular';
     if (project == 'All')
       this.actualProject = 'All';
       this.console.log(this.actualProject, project);

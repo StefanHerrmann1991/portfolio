@@ -20,7 +20,7 @@ export class ContactFormComponent implements OnInit {
   }
 
   async sendMail() {
-
+    console.log('sending mail')
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
@@ -30,16 +30,15 @@ export class ContactFormComponent implements OnInit {
     emailField.disabled = true;
     sendButton.disabled = true;
     //Animation anzeigen
-    let formData = new FormData();
-    formData.append('name', nameField.value)
-    formData.append('email', emailField.value)
-    formData.append('message', messageField.value)
-
-    await fetch('https://stefan-herrmann.developerakademie.net.send_mail/send_mail.php',
+    let fd = new FormData();
+    fd.append('name', nameField.value)
+    fd.append('email', emailField.value)
+    fd.append('message', messageField.value)
+    await fetch('http://stefan-herrmann.developerakademie.net/send_mail/send_mail.php',
       {
         method: 'POST',
-        body: formData
-      })
+        body: fd
+      });
 
     //Text anzeigen Nachricht gesendet
     nameField.disabled = false;

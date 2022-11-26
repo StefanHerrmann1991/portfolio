@@ -13,7 +13,6 @@
     display: flex
     justify-content: space-evenly
     align-items: center
-   
 
 .main
     background-color: $background
@@ -25,15 +24,14 @@ div
 .journey-container
     display: flex
     flex-direction: row
-    padding-left: $pdg 
-    padding-right: $pdg 
+    padding-left: $pdg
+    padding-right: $pdg
 
 .journey
     display: flex
     justify-content: center
     flex-direction: column
     align-items: center
-
 
 .center
     display: flex
@@ -57,6 +55,20 @@ img
     padding: 20px
 
 
+@media (max-width: $tablet)
+
+    .journey-container
+        display: flex
+        flex-direction: column
+       
+        
+    .about-me
+        padding: $pdg
+        h2
+            padding-bottom: $xl
+         
+
+
 @media (max-width: $mobile)
     .about-me
         justify-content: center
@@ -68,7 +80,6 @@ img
             padding-bottom: $s
             padding-top: $xl
 
-
     .journey-container
         display: flex
         flex-direction: column
@@ -77,3 +88,6 @@ img
     .main
         padding-top: $xl
         padding-bottom: $xl
+
+
+            

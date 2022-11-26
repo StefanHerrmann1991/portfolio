@@ -31,7 +31,7 @@ export class JourneyComponent implements OnInit {
   }, {
     'img': 'flight-takeoff-line',
     'title': 'MY JOURNEY',
-    'text': 'after trying to learn coding by myself I dicided to enroll at the Developer Akademie. I wanted to create high quality code, reviewed by professionel developers. Coding combines every aspect I like about researching but its way faster.'
+    'text': 'after starting to code by myself I dicided to enroll at the Developer Akademie. I wanted to create high quality code, reviewed by professionel developers. Coding combines every aspect I like about researching but its way faster.'
   }]
 
 
