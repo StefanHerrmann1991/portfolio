@@ -1,8 +1,8 @@
 @import '../../styles.sass'
 
 input
-    background-color: $background
-    width: 610px
+    background-color: $background   
+    width: 80%
     padding: 10px
     text-indent: 10px
     color: white
@@ -10,22 +10,31 @@ input
         font-family: 'Inter', sans-serif
         color: #989898
 
-.email-contact
-    padding-left: $m
+
+div
+    color: white
 
 .contact
-    display: flex
-    justify-content: center
-    align-items: center
-    flex-direction: column
     div
         width: 90%
 
+.email-delivered
+    position: absolute
+    width: 90vw
+    height: 90vh
+    background-color: rgba(0, 0, 0, 0.9)
+    font-size: 45px
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+
 .main
+    position: relative
     background-color: black
     display: flex
     flex-direction: column
-    align-items: flex
+    align-items: flex-start
     justify-content: center
     padding-bottom: $pdg
     padding-top: $pdg
@@ -36,8 +45,7 @@ input
         align-self: flex-start
         padding-bottom: $m
 
-div
-    color: white
+.contact div
     padding-top: $m
     padding-bottom: $s
 
@@ -54,14 +62,26 @@ h2
     padding: 0
     border: solid 2px $secondary
     margin-right: $xl
+    transition: background-color 0.6s linear
+    display: flex
+    justify-content: center
+    align-items: center
+    div
+        color: $secondary
+    &:hover
+        background-color: $secondary
+        div
+            color: black
 
 .btn-container
+    width: 80%
+    padding: 0px
     display: flex
     justify-content: flex-end
 
 textarea
-    height: 180px
-    width: 610px
+    width: 80%
+    height: 180px 
     resize: none
     background: $background
     padding: 10px
@@ -89,6 +109,37 @@ textarea:focus
     border: 1px solid $primary
     box-shadow: 0 0 10px $secondary
 
+.hide
+    display: none
+
+.show
+    display: none
+
+.lds-dual-ring
+    margin-top: 10px
+    display: inline-block
+    align-self: center
+    width: 45px
+    height: 45px
+    padding: 0px
+
+.lds-dual-ring:after
+    content: " "
+    display: block
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    border: 6px solid $primary
+    border-color: $primary transparent $primary transparent
+    animation: lds-dual-ring 1.2s linear infinite
+
+@keyframes lds-dual-ring
+    0%
+        transform: rotate(0deg)
+
+    100%
+        transform: rotate(360deg)
+
 @media (max-width: $tablet)
 
     textarea
@@ -97,9 +148,10 @@ textarea:focus
     input
         width: 100%
 
-
-
 @media (max-width: $mobile)
+
+    .lds-dual-ring
+        margin: 0px
 
     .main
         background-color: $background
@@ -127,5 +179,3 @@ textarea:focus
         padding-top: $m
         padding-bottom: $s
         padding-left: 0px
-
-

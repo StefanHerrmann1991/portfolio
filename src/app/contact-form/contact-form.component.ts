@@ -12,7 +12,8 @@ export class ContactFormComponent implements OnInit {
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
 
-
+  isLoading: boolean = false;
+  isDelivered : boolean = false;
 
   constructor() { }
 
@@ -20,6 +21,7 @@ export class ContactFormComponent implements OnInit {
   }
 
   async sendMail() {
+    this.isLoading = true;
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
@@ -40,10 +42,17 @@ export class ContactFormComponent implements OnInit {
       });
 
     //Text anzeigen Nachricht gesendet
+    nameField.value = "";
+    emailField.value = "";
+    messageField.value = "";
     nameField.disabled = false;
     emailField.disabled = false;
     messageField.disabled = false;
     sendButton.disabled = false;
+    this.isLoading = false;
+    this.isDelivered = true;
+    setTimeout(() => {
+      this.isDelivered = false;
+    }, 2500);
   }
-
 }

@@ -1,9 +1,11 @@
 <div class="main" id="contactForm">
-    <div class="email-contact">
+    <div [ngClass]="{'email-delivered': isDelivered, 'hide' : !isDelivered}"> Your E-Mail was successfully delivered. Thank you for consulting me.</div>
+    <div>
         <h2>Contact me</h2>
         <div>Get in touch via the form below, or by sending an E-mail to <span
                 class="email">stefan-herrmann@posteo.de</span></div>
     </div>
+  
     <form (submit)="sendMail()" ngNativeValidate #myForm>
         <div class="contact">
             <div>
@@ -20,7 +22,12 @@
             </div>
         </div>
         <div class="btn-container">
-            <button class="send-btn" #sendButton>Send</button>
+            <button class="send-btn" #sendButton>
+                <div [ngClass]="{'hide' : !isLoading}">
+                    <div class="lds-dual-ring"></div>
+                </div>
+                <div [ngClass]="{'hide' : isLoading}">Senden</div>
+            </button>
         </div>
     </form>
 </div>
