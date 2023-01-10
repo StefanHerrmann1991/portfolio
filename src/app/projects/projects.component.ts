@@ -40,18 +40,24 @@ export class ProjectsComponent implements OnInit {
       'img': 'assets/img/projects/portfolio.png',
       'language': 'Angular'
     }
+    , {
+      'name': 'Pokedex',
+      'path': 'https://stefan-herrmann.developerakademie.net/Pokedex',
+      'img': 'assets/img/projects/pokedex.jpg',
+      'language': 'JavaScript'
+    }
   ]
   showProjects(project: string) {
-    
+
     if (project == 'Angular')
       this.actualProject = 'JavaScript';
     if (project == 'JavaScript')
       this.actualProject = 'Angular';
     if (project == 'All')
       this.actualProject = 'All';
-      this.console.log(this.actualProject, project);
+    this.console.log(this.actualProject, project);
   }
-  
+
 }
 
 
