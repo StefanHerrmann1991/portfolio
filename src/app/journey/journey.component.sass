@@ -1,7 +1,7 @@
 @import '../../styles.sass'
 
 .profile-pic
-    background-color: black
+    background-image: linear-gradient(to right bottom, #adaeaf, #8c9293, #6d7675, #535c56, #3e4137)
     width: 209px
     height: 209px
     border-radius: 50%
@@ -24,14 +24,18 @@ div
 .journey-container
     display: flex
     flex-direction: row
+    justify-content: space-between
     padding-left: $pdg
     padding-right: $pdg
+    
 
 .journey
     display: flex
     justify-content: center
     flex-direction: column
     align-items: center
+    .journey-discription
+        max-width: 300px
 
 .center
     display: flex
@@ -54,20 +58,16 @@ img
     border-radius: 50%
     padding: 20px
 
-
 @media (max-width: $tablet)
 
     .journey-container
         display: flex
         flex-direction: column
-       
-        
+
     .about-me
         padding: $pdg
         h2
             padding-bottom: $xl
-         
-
 
 @media (max-width: $mobile)
     .about-me
@@ -88,6 +88,3 @@ img
     .main
         padding-top: $xl
         padding-bottom: $xl
-
-
-            

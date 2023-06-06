@@ -37,11 +37,7 @@ export class SkillsComponent implements OnInit {
     , {
       'name': 'RestAPI',
       'icon': 'api'
-    }
-    , {
-      'name': 'Design Thinking',
-      'icon': 'designThinking'
-    }
+    }    
     , {
       'name': 'Database',
       'icon': 'database'

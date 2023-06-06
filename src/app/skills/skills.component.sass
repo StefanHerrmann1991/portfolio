@@ -6,8 +6,7 @@
     background: $background
     padding-top: $pdg
     padding-bottom: $pdg
-
-
+    height: 40vh
     h2
         display: block
 
@@ -15,6 +14,7 @@
     display: flex
     flex-wrap: wrap
     justify-content: center
+    height: 90%
 
 .skill
     margin: 30px
@@ -46,6 +46,9 @@
 
 $tile-bg: #cfcfdf
 
+@media (max-width: $tablet )
+    .main
+        height: 60vh
 
 @media (max-width: $mobile)
 
@@ -53,10 +56,10 @@ $tile-bg: #cfcfdf
         padding-top: $xl
         padding-bottom: $xl
 
-
     .main
         padding: 0px
         padding-top: $xl
+        height: 60vh
 
     .skill-container
         display: flex
@@ -75,11 +78,11 @@ $tile-bg: #cfcfdf
         border-radius: 6px
         position: relative
 
-    div 
+    div
         font-size: 16px
         text-align: center
 
-    .icon-circ        
+    .icon-circ
         border-radius: 50%
         position: absolute
         top: -18px !important

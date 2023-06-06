@@ -1,9 +1,9 @@
 <div class="main" id="projects">
     <h2 data-aos="fade-up" data-aos-duration="3000">My Work</h2>
     <div class="lang-btn">
-        <div data-aos="zoom-in-up"  class="language">
-            <button (click)="showProjects('All')" >All</button>
-            <button (click)="showProjects('Angular')" >Angular</button>
+        <div data-aos="zoom-in-up" class="language">
+            <button (click)="showProjects('All')">All</button>
+            <button (click)="showProjects('Angular')">Angular</button>
             <button (click)="showProjects('JavaScript')">JavaScript</button>
         </div>
         <div class="projects" data-aos="zoom-in-up">
@@ -12,7 +12,11 @@
                     <a [attr.data-aos-delay]="150 * i" class="project-img" target="_blank" href="{{ project.path }}   "
                         (mouseover)="showTitle=i" (mouseout)="showTitle=-1">
                         <div><img src="{{ project.img }}"></div>
-                        <div [ngClass]="showTitle == i ? '' : 'showTitle'" class="project-name">{{ project.name }}</div>
+                        <div [ngClass]="showTitle == i ? '' : 'showTitle'" class="project-name">
+                            <h2>{{ project.name }}</h2>
+                            <div>{{ project.description}}</div>
+                        </div>
+
                     </a>
                 </div>
             </div>

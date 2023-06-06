@@ -25,23 +25,27 @@ export class ProjectsComponent implements OnInit {
   projects: any[] = [
     {
       'name': 'El Pollo Loco',
+      'description': 'A JavaScript-based, object-oriented jump-and-run game, similar to Super Mario.',
       'path': 'https://stefan-herrmann.developerakademie.net/ElPolloLoco',
       'img': 'assets/img/projects/El Polo Loco.png',
       'language': 'JavaScript'
     },
     {
       'name': 'Join',
-      'path': 'https://stefan-herrmann.developerakademie.net/join/index.html',
+      'description': 'A JavaScript-built Kanban board for team project creation.',
+      'path': 'http://stefan-herrmann.developerakademie.net/Join/main/00login-register/login.html',
       'img': 'assets/img/projects/join.png',
       'language': 'JavaScript'
     }, {
       'name': 'Portfolio',
+      'description': 'An Angular-developed portfolio showcasing personal work.',
       'path': '',
       'img': 'assets/img/projects/portfolio.png',
       'language': 'Angular'
     }
     , {
       'name': 'Pokedex',
+      'description': 'A JavaScript-implemented Pokedex leveraging REST API.',
       'path': 'https://stefan-herrmann.developerakademie.net/Pokedex',
       'img': 'assets/img/projects/pokedex.jpg',
       'language': 'JavaScript'
