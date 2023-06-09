@@ -1,25 +1,28 @@
 @import '../../styles.sass'
 
-html
-    background-color: black
+
+
 
 .costom
-    background-color: black
-    color: white
-    font-size: 200%
+    background-color: $background
+    color: black
+    font-size: 40px
+    height: 40px
+    width: 40px
 
-.header
-    padding-top: $xxl
-    padding-bottom: $xxl
-    padding-right: $pdg
-    padding-left: $pdg
-    background-color: black
+
+.header 
+    background-color: $background
     display: flex
     justify-content: space-between
     align-items: center
+    padding-left: $s
+    padding-right: $s
+    padding-top: $m
+    padding-bottom: calc($m + $l) 
     img
-        height: 60px
-        width: 60px
+        height: 30px
+        width: 30px
     a
         margin-left: 15px
 
@@ -65,12 +68,3 @@ html
         justify-content: center
         align-items: center
 
-@media (max-width: $mobile)
-    .header
-        padding-top: $s
-        padding-bottom: $s
-        padding-right: $s
-        padding-left: $s
-        img
-            height: 40px
-            width: 40px

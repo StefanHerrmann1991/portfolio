@@ -3,9 +3,4 @@
     <button class="burger" (click)="toggleMenu()">
         <mat-icon appearance="outline" class="material-icons costom">{{ isMenuOpen ? "close" : "menu"}}</mat-icon>     
     </button>
-    <div class="menu" [class.is-open]="isMenuOpen">
-        <a routerLink="/">HOME</a>
-        <a href="#journey">ABOUT</a>
-        <a href="#projects">PROJECTS</a>        
-    </div>
 </div>

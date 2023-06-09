@@ -1,86 +1,85 @@
+
+$box-shadow: 0px 4px 4px rgba(197, 197, 197, 0.25)
+$primary: black
+$secondary: #5988FF
+$gray: #1a1a1a
+$background: #F5F5F5
+$box-shadow: 0px 4px 4px rgba(197, 197, 197, 0.25)
+
+$xxs: 11px
+$xs: 16px
+$s: 23px
+$m: 32px
+$l: 45px
+$xl: 64px
+$xxl: 90px
+$xxxl: 128px
+$xxxxl: 181px
+$pdg: 6.5%
+$small: 390px
+$mobile: 641px
+$tablet: 1008px
+$border: 4px solid #000000
+::-webkit-scrollbar
+    width: 8px
+    height: 8px
+
 *
     margin: 0
     padding: 0
     margin-block-start: 0
     margin-block-end: 0
     scroll-behavior: smooth
+body
+    background-color: #F5F5F5
 
-$box-shadow: 0px 4px 4px rgba(197, 197, 197, 0.25)
-$primary: #fa2759
-$secondary: #2dfcd8
-$gray: #1a1a1a
-$background: #131111
-$box-shadow: 0px 4px 4px rgba(197, 197, 197, 0.25)
-$pdg: 9%
-$xxl: 60px
-$xl: 54px
-$l: 40px
-$m: 24px
-$s: 12px
-$mobile: 641px
-$tablet: 1008px
+h2
+    font-family: 'Syne'
+    font-style: normal
+    font-weight: 800
+    font-size: 45px
+    line-height: 100%
+    opacity: 0.8
+    white-space: nowrap
+
+@mixin flex-center
+    display: flex
+    justify-content: center
+    align-items: center
+
+@mixin flex-center-row
+    @include flex-center
+    flex-direction: row
+
+@mixin flex-center-col
+    @include flex-center
+    flex-direction: column
+
+h1, h2, h3, h4, h5
+    font-family: syne
+
+div, input, button, span, a
+    font-family: overpass
+    font-size: 23px
+    color: black
+    a
+        text-decoration: none
 
 .hidden
     overflow-x: hidden
     overflow-y: hidden
 
-.background2
-    background-color: $background
-
-body
-    margin-block-start: 0px
-    margin-block-end: 0px
-    font-family: 'Inter', sans-serif
-
-h1
-    font-size: 64px
-
-h2
-    font-size: 36px
-    text-align: center
-    width: 100%
-    color: white
-    padding-bottom: $xxl
-
-div
-    font-size: 18px
-
-body, html, h1
-    margin: 0
-    padding: 0
-    font-family: 'Inter', sans-serif
-
-a
-    text-decoration: none
-    color: $secondary
-    cursor: pointer
-
-.pdg-s
-    padding-left: 80px
-    padding-right: 80px
-
-.pdg-l
-    padding-left: 80px
-
-.pdg-r
-    padding-right: 80px
-
-.pdg-t
-    padding-top: 80px
-
-.pdg-b
-    padding-bottom: 80px
-
-.mgn-l
-    margin-left: 80px
-.mgn-r
-    margin-right: 80px
-
 button
     &:hover
         cursor: pointer
-    
+
+.arrow-container
+    display: flex
+    justify-content: center
+    padding-top: $s
+    padding-bottom: $xl
+    .arrow
+        width: 180px
+        height: 180px
 
 @media (max-width: $mobile)
-    h2
-        font-size: 36px

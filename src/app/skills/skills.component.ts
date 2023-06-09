@@ -14,34 +14,51 @@ export class SkillsComponent implements OnInit {
   }
 
   skills: any[] = [
+
+
     {
-      'name': 'CSS / HTML',
-      'icon': 'htmlCss'
+      'name': 'Angular',
+      'icon': 'assets/img/icons/Icons mobile s3 (0).png'
+    }
+
+    , {
+      'name': 'Typescript',
+      'icon': 'assets/img/icons/Icons mobile s3 (1).png'
     }
     , {
       'name': 'JavaScript',
-      'icon': 'js'
+      'icon': 'assets/img/icons/Icons mobile s3 (2).png'
+    },
+    {
+      'name': 'HTML',
+      'icon': 'assets/img/icons/Icons mobile s3 (3).png'
     }
     , {
-      'name': 'Angular',
-      'icon': 'angular'
+      'name': 'CSS',
+      'icon': 'assets/img/icons/Icons mobile s3 (4).png'
     }
     , {
-      'name': 'SCRUM',
-      'icon': 'scrum'
+      'name': 'Firebase',
+      'icon': 'assets/img/icons/Icons mobile s3 (5).png'
     }
+
     , {
       'name': 'Git',
-      'icon': 'git'
+      'icon': 'assets/img/icons/Icons mobile s3 (6).png'
     }
     , {
       'name': 'RestAPI',
-      'icon': 'api'
-    }    
-    , {
-      'name': 'Database',
-      'icon': 'database'
+      'icon': 'assets/img/icons/Icons mobile s3 (7).png'
     }
+    , {
+      'name': 'Srum',
+      'icon': 'assets/img/icons/Icons mobile s3 (8).png'
+    }
+    , {
+      'name': 'Material Design',
+      'icon': 'assets/img/icons/Icons mobile s3 (9).png'
+    }
+  
   ]
 
 
