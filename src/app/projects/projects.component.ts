@@ -29,23 +29,21 @@ export class ProjectsComponent implements OnInit {
       'path': 'https://stefan-herrmann.developerakademie.net/ElPolloLoco',
       'github':'https://github.com/StefanHerrmann1991/El-Pollo-Loco',
       'img': 'assets/img/projects/El Polo Loco.png',
-      'language': 'JavaScript | HTML | CSS'
+      'technologies': 'JavaScript | HTML | CSS'
     },
     {
       'name': 'Join',
       'description': 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       'path': 'http://stefan-herrmann.developerakademie.net/Join/main/00login-register/login.html',
       'github':'https://github.com/StefanHerrmann1991/Join',
-      'img': 'assets/img/projects/join.png',
-      'language': 'JavaScript',      
+      'img': 'assets/img/projects/join.png',     
       'technologies': 'JavaScript | HTML | SASS'
     }, {
       'name': 'Portfolio',
       'description': 'An Angular-developed portfolio showcasing personal work.',
       'path': 'https://stefan-herrmann.developerakademie.net/stefan-herrmann/',
       'github':'https://github.com/StefanHerrmann1991/portfolio',
-      'img': 'assets/img/projects/portfolio.png',
-      'language': 'Angular',
+      'img': 'assets/img/projects/portfolio.png',      
       'technologies': 'Angular | TypeScript | SASS'
     }
     ,/*  {
@@ -53,8 +51,7 @@ export class ProjectsComponent implements OnInit {
       'description': 'A JavaScript-implemented Pokedex leveraging REST API.',
       'path': 'https://stefan-herrmann.developerakademie.net/Pokedex',
       'github':'https://github.com/StefanHerrmann1991/Pokedex',
-      'img': 'assets/img/projects/pokedex.jpg',
-      'language': 'JavaScript',
+      'img': 'assets/img/projects/pokedex.jpg',      
       'technologies': 'JavaScript | HTML | SASS | Api'
     } */
   ]

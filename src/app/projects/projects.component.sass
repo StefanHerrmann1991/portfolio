@@ -1,5 +1,48 @@
 @import '../../styles.sass'
 
+.right
+    display: flex
+    align-items: flex-end
+    flex-direction: column
+
+    .project-number
+        align-items: flex-start
+    .project-description
+        text-align: right
+    .container
+        position: relative
+        display: flex
+        justify-content: flex-start
+        .overlay
+            border: 4px solid #000000
+            position: absolute
+            top: 10px
+            left: 10px
+            right: 10px
+            bottom: 10px
+            width: 80%
+            height: 100%
+.left
+    display: flex
+    align-items: flex-start
+    flex-direction: column
+    .container
+        position: relative
+        display: flex
+        justify-content: flex-end
+        .overlay
+            border: 4px solid #000000
+            position: absolute
+            top: 10px
+            left: 16.5%
+            right: 0px
+            bottom: 10px
+            width: 80%
+            height: 100%
+    .project-number
+        align-items: flex-end
+    .project-description
+        text-align: left
 .main
     padding-left: $s
     padding-right: $s
@@ -10,18 +53,10 @@
 
 .projects
     img
-        width: 316px
-        height: 200px
-
-.container
-    display: flex
-    flex-direction: column
-
-    & div:nth-child(odd)
-        align-self: flex-start
-
-    & div:nth-child(even)
-        align-self: flex-end
+        width: 80%
+        aspect-ratio: 100 / 65
+        position: relative
+        display: flex
 
 .project-number
     font-family: 'Syne'
@@ -42,3 +77,18 @@ h3
     font-size: 32px
     line-height: 120%
     padding-top: $m
+
+.technologies
+    font-size: 23px
+    line-height: 28px
+    display: flex
+    align-items: center
+    color: #5988FF
+    padding-top: 15px
+    padding-bottom: 15px
+
+.link-boxes
+    margin-top: 55px
+    margin-bottom: 55px
+    border: $border
+    padding: 20px 60px

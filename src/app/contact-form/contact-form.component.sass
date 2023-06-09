@@ -1,5 +1,44 @@
 @import '../../styles.sass'
 
+div
+    color: #FFFCF3
+
+input, textarea
+    background-color: black
+    border: none
+    border-bottom: 2px solid #FFFCF3
+    width: 100%
+    color: #FFFCF3
+    font-size: 16px
+    margin-bottom: $ml
+
+textarea
+    height: 200px
+    font-family: overpass
+    resize: none
+
+input
+    height: 40px
+
+.contact-data
+    padding-left: $s
+    padding-right: $s
+
+h3
+
+    font-family: 'Overpass'
+    font-style: normal
+    font-weight: 700
+    font-size: 32px
+    line-height: 38px
+    text-align: center
+    color: $secondary
+    padding-top: $ml
+    padding-bottom: $s
+
+.greeting
+    text-align: center
+    padding-bottom: $ml
 .main
     background-color: black !important
     position: relative
@@ -9,3 +48,10 @@
     background-color: $background
     img
         width: 100%
+.btn-container
+    width: 100%
+    @include flex-center
+    .send-btn
+        border: 2px solid #FFFCF3
+        background-color: black
+        padding: 20px 40px
