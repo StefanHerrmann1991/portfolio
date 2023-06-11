@@ -11,19 +11,21 @@
             <div [attr.data-aos-delay]="150 * i" [ngClass]="i % 2 === 0 ? 'right' : 'left'" class="project-img">
                 <div class="project-number">0{{i + 1}}/04</div>
                 <div class="container">
-                    <img src="{{ project.img }}" alt="Project Image">
-                    <div class="overlay"></div>
+                    <img [ngClass]="{'gray': !isHovering[i]}" src="{{ project.img }}"  (mouseover)="isHovering[i] = true">
+                    <div [ngClass]="{'overlay': isHovering[i]}"></div>
                 </div>
-
-                <h3>{{ project.name }}</h3>
-                <div class="technologies">{{ project.technologies}}</div>
-                <div class="project-description">{{ project.description }}</div>
-                <div class="link-boxes">
-                    <a target="_blank" href="{{ project.github}}">GitHub</a>
+                <div [ngClass]="{'hide': !isHovering[i]}" class="project" >
+                    <h3>{{ project.name }}</h3>
+                    <div class="technologies">{{ project.technologies}}</div>
+                    <div class="project-description">{{ project.description }}</div>
+                    <div class="link-boxes">
+                        <a target="_blank" href="{{ project.github}}">GitHub</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    
 
     <div class="arrow-container">
         <img data-aos="fade-down-left" class="arrow" src="assets/img/icons/arrowLeft.png">
