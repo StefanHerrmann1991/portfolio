@@ -17,11 +17,11 @@ export class FooterComponent implements OnInit {
     'url': 'https://github.com/StefanHerrmann1991?tab=overview&from=2022-04-01&to=2022-04-30'
   },
   {
-    'logo': 'assets/img/icons/linkedin-box-fill.png',
+    'logo': 'assets/img/icons/linkedin.png',
     'url': 'https://www.linkedin.com/in/stefan-herrmann-a564451b3/'
   },
   {
-    'logo': 'assets/img/icons/xing-fill.png',
+    'logo': 'assets/img/icons/email.png',
     'url': 'https://www.xing.com/profile/Stefan_Herrmann132/cv'
   },]
 

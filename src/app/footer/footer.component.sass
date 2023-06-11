@@ -1,16 +1,9 @@
 @import '../../styles.sass'
 
 .main
-    display: flex
-    justify-content: space-between
-    align-items: center
-    padding-top: $l
-    padding-bottom: $l
-    padding-right: $pdg
-    padding-left: $pdg
-    color: white
-    background-color: black
+    @include flex-center-col
 
+    background-color: black
 
 .icons
     display: flex
@@ -18,8 +11,24 @@
     align-items: center
 
 img
-    height: 45px
-    width: 45px
-    margin-left: $s
+    height: 40px
+    width: 40px
 
+.icons
+    padding-top: $xl
+    gap: 47px
 
+a
+    color: white
+.mail
+    font-size: 23px
+    padding-top: 48px
+
+.legal-notice
+    padding-bottom: $l
+    padding-top: $s
+    font-size: 16px
+
+.logo
+    padding-top: 28px
+    padding-bottom: 28px
