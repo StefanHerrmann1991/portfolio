@@ -12,7 +12,9 @@
                 <div class="project-number">0{{i + 1}}/04</div>
                 <div class="container">
                     <img [ngClass]="{'gray': !isHovering[i]}" src="{{ project.img }}"  (mouseover)="isHovering[i] = true">
-                    <div [ngClass]="{'overlay': isHovering[i]}"></div>
+                    <div [ngClass]="{'overlay': isHovering[i]}">
+                        <img [ngClass]="{'hide' :!isHovering[i]}" src="assets/img/icons/circleArrow.png">
+                    </div>
                 </div>
                 <div [ngClass]="{'hide': !isHovering[i]}" class="project" >
                     <h3>{{ project.name }}</h3>

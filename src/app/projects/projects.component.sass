@@ -19,7 +19,17 @@
             left: 2.5%
             width: 80%
             height: 100%
-            animation: spread-out 0.5s ease-in-out
+            animation: spread-out 0.25s ease-in-out
+            img
+                position: absolute
+                top: 50%
+                left: -18.75px
+                transform: translateY(-50%)
+                width: 37.5px
+                height: 37.5px
+                transform: rotate(90deg)
+                animation-delay: 0.5s
+                animation: move-arrow 0.5s ease-in-out forwards
 
     .project-description
         text-align: right
@@ -44,7 +54,17 @@
             bottom: 10px
             width: 80%
             height: 100%
-            animation: spread-out 0.5s ease-in-out
+            animation: spread-out 0.25s ease-in-out
+            img
+                position: absolute
+                top: 50%
+                right: -18.75px
+                transform: translateY(-50%)
+                width: 37.5px
+                height: 37.5px
+                transform: rotate(90deg)
+                animation-delay: 0.5s
+                animation: move-arrow 0.5s ease-in-out forwards
 
     .project-description
         text-align: left
@@ -60,6 +80,14 @@
     100%
         height: 100%
         width: 80%
+
+@keyframes move-arrow
+    0%
+        opacity: 0
+        transform: rotate(90deg)
+    100%
+        opacity: 1
+        transform: rotate(0deg)
 
 .work-description
     padding-top: $l
