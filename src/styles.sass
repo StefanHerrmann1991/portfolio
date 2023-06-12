@@ -20,8 +20,11 @@ $xxl: 90px
 $xxxl: 128px
 $xxxxl: 181px
 $small: 390px
-$mobile: 641px
-$tablet: 1008px
+
+$phone: 480px
+$tablet: 768px
+$desktop: 992px
+$large: 1200px
 
 ::-webkit-scrollbar
     width: 8px
@@ -85,4 +88,17 @@ button
         width: 180px
         height: 180px
 
-@media (max-width: $mobile)
+.desktop-flex
+    display: none !important
+.mobile-flex
+    display: flex !important
+.mobile
+    display: block !important
+
+@media (min-width: $tablet)
+    .mobile
+        display: none !important
+    .desktop
+        display: block !important
+    .desktop-flex
+        display: flex !important
