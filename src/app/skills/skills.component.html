@@ -1,5 +1,5 @@
 <div appHidden class="main" id="skills">
-    <div class="arrow-container">
+    <div class="arrow-container left-arrow">
         <img data-aos="fade-down-left" class="arrow" src="assets/img/icons/arrowLeft.png">
     </div>
     <div class="skill-title-container">
@@ -9,7 +9,7 @@
     </div>
     <div class="skills">
         <div class="skill-animation" *ngFor="let skill of skills; let i = index">
-            <div class="skill" data-aos="fade-up-left" [attr.data-aos-delay]="150 * i">
+            <div class="skill">
                 <div class="name-img">
                     <img src="{{skill.icon}}">
                     <div class="skill-name">{{skill.name}}</div>

@@ -1,19 +1,19 @@
 <div class="main" id="projects">
-    <div class="arrow-container">
+    <div class="arrow-container arrow-right">
         <img data-aos="fade-down-right" class="arrow" src="assets/img/icons/arrowRight.png">
     </div>
-    <h2>Portfolio</h2>
+    <h2 class="portfolio">Portfolio</h2>
     <div class="work-description">
         Feel free to try out my latest development projects and look into their code.
     </div>
     <div class="projects" data-aos="zoom-in-up">
-        <div *ngFor="let project of projects; let i = index">
+        <div *ngFor="let project of projects; let i = index" >
             <div [attr.data-aos-delay]="150 * i" [ngClass]="i % 2 === 0 ? 'right' : 'left'" class="project-img">
                 <div class="project-number">0{{i + 1}}/04</div>
-                <div class="container">
+                <div class="overlay-container">
                     <img [ngClass]="{'gray': !isHovering[i]}" src="{{ project.img }}"  (mouseover)="isHovering[i] = true">
                     <div [ngClass]="{'overlay': isHovering[i]}">
-                        <img [ngClass]="{'hide' :!isHovering[i]}" src="assets/img/icons/circleArrow.png">
+                        <img [ngClass]="{'d-none' :!isHovering[i]}" src="assets/img/icons/circleArrow.png">
                     </div>
                 </div>
                 <div [ngClass]="{'hide': !isHovering[i]}" class="project" >
@@ -29,7 +29,7 @@
     </div>
     
 
-    <div class="arrow-container">
+    <div class="arrow-container left-arrow">
         <img data-aos="fade-down-left" class="arrow" src="assets/img/icons/arrowLeft.png">
     </div>
 </div>

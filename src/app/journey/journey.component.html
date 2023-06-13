@@ -8,6 +8,9 @@
             <div *ngFor="let journey of journeys; let i = index">
                 <div data-aos="fade-up-left" [attr.data-aos-delay]="200 * i"> {{journey.text}} </div>
             </div>
+            <div class="btn-container">
+                <button class="contact-btn desktop"><a class="btn-link" href="#contactForm">Let's talk</a></button>
+            </div>
         </div>
         <div class="image-con">
             <img data-aos="slide-right" data-aos-delay="200" class="profile-pic"

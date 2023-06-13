@@ -16,8 +16,8 @@
     padding-top: $m
     padding-bottom: calc($m + $l)
     img
-        height: 30px
-        width: 30px
+        height: 40px
+        width: 40px
     a
         margin-left: 15px
 
@@ -54,9 +54,13 @@
 .burger
     border: none
     background-color: black
-    display: none
-    @media (max-width: $tablet)
-        display: flex
-        flex-direction: row
-        justify-content: center
-        align-items: center
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+@media (min-width: $tablet)
+    .header
+        padding-left: max(10%, $s)
+        padding-right: max(10%, $s)
+

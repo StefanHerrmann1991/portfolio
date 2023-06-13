@@ -3,15 +3,17 @@
 .right
     display: flex
     align-items: flex-end
-    flex-direction: column
+    flex-direction: column  
+   
     .project
         display: flex
         align-items: flex-end
         flex-direction: column
-    .container
+    .overlay-container
         position: relative
         display: flex
         justify-content: flex-start
+        width: 100%
         .overlay
             border: 4px solid #000000
             position: absolute
@@ -42,10 +44,11 @@
         display: flex
         align-items: flex-start
         flex-direction: column
-    .container
+    .overlay-container
         position: relative
         display: flex
         justify-content: flex-end
+        width: 100%
         .overlay
             border: 4px solid #000000
             position: absolute
@@ -136,8 +139,34 @@ h3
     padding: 20px 60px
 .hide
     opacity: 0
+
+
+.d-none
+    display: none !important
+
 .gray
     filter: grayscale(100%)
 
 .project-img img
     transition: filter 1s ease
+
+.portfolio
+    display: flex
+    justify-content: center
+
+@media (min-width: $tablet)
+
+    .main
+        padding-left: max(10%, $s)
+        padding-right: max(10%, $s)
+
+    .arrow-right
+        margin-right: 460px
+
+    .right   
+        .project-container
+            display: flex
+
+    .left
+        .project-container
+            display: flex

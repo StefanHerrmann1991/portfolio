@@ -25,8 +25,10 @@
     flex-wrap: wrap
     gap: $m
     border: $border
+
     div
         font-size: 16px
+
     .skill
         padding-top: 15.5
         padding-bottom: 15.5
@@ -34,7 +36,21 @@
     img
         width: 60px
         height: 60px
+
     .name-img
         @include flex-center-col
 
+    > *
+        flex: 0 1 calc(50% - 32px)
+        max-width: calc(50% - 32px)
 
+@media (min-width: $tablet)
+
+    .main
+        padding-left: max(10%, $s)
+        padding-right: max(10%, $s)
+
+    .skills
+        > *
+            flex: 0 1 calc(20% - 32px)
+            max-width: calc(20% - 32px)

@@ -16,7 +16,25 @@
 
     padding-top: 44px
 
+.btn-container
+    padding-top: 35px
+    width: 100%
+    @include flex-center
+    .contact-btn
+        border: 4px solid #000000
+        filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15))
+        padding: 20px 60px
+        @include flex-center-row
+
+        .arrow-container
+            padding-left: 45%
+
 @media (min-width: $tablet)
+
+    .main
+        padding-left: max(10%, $s)
+        padding-right: max(10%, $s)
+
     .content
         display: flex
         justify-content: space-between
