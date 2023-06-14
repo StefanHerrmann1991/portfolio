@@ -29,11 +29,19 @@
         .arrow-container
             padding-left: 45%
 
-@media (min-width: $tablet)
+
+@media (min-width: $x-small)
+    .image-con
+        .profile-pic
+            width: 270px
+            height: 270px
+
+
+@media (min-width: $desktop)
 
     .main
-        padding-left: max(10%, $s)
-        padding-right: max(10%, $s)
+        padding-left: max(5%, $s)
+        padding-right: max(5%, $s)
 
     .content
         display: flex
@@ -46,4 +54,6 @@
     .image-con
         flex: 1
         .profile-pic
+            height: 533px
+            width: 533px
             padding-top: 52px

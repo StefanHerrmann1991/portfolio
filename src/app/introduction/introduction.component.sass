@@ -8,13 +8,8 @@ span
     align-items: center
     flex-direction: column
     justify-content: space-between
-    h1
-        font-family: 'Syne'
-        font-style: normal
-        font-weight: 800
-        font-size: 45px
-        line-height: 100%
-        text-align: center
+    padding-left: $s
+    padding-right: $s
 
 .border-name
     @include flex-center
@@ -43,8 +38,6 @@ span
 .mailto
     display: flex
     justify-content: space-between
-    padding-left: $s
-    padding-right: $s
     height: max(300px, 35vh)
     flex-direction: row
     align-items: flex-end
@@ -73,10 +66,27 @@ span
     100%
         top: 50%
 
+@media (min-width: $x-small)
+    .name
+        font-size: 20px
+
+    .image-con
+        .profile-pic
+            width: 270px
+            height: 270px
+
+    .mailto
+        padding-top: $s
+        padding-bottom: $s
+
 @media (min-width: $tablet)
     .main
-        padding-left: max(10%, $s)
-        padding-right: max(10%, $s)
+        padding-left: max(5%, $s)
+        padding-right: max(5%, $s)
 
     .mailto
         padding: 0px
+
+@media (min-width: $large)
+    .name
+        font-size: $l

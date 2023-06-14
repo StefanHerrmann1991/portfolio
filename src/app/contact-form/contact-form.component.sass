@@ -81,3 +81,13 @@ h3
     height: 20px
     right: 5%
     top: 10px
+
+.contact
+    @include flex-center-col
+    .contact-data
+        width: max(340px, 40%)
+
+@media (min-width: $desktop)
+
+    input, textarea
+        width: calc( 100% - 21px )

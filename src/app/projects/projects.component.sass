@@ -3,8 +3,8 @@
 .right
     display: flex
     align-items: flex-end
-    flex-direction: column  
-   
+    flex-direction: column
+    .project-container
     .project
         display: flex
         align-items: flex-end
@@ -40,6 +40,7 @@
     display: flex
     align-items: flex-start
     flex-direction: column
+    .project-container
     .project
         display: flex
         align-items: flex-start
@@ -140,7 +141,6 @@ h3
 .hide
     opacity: 0
 
-
 .d-none
     display: none !important
 
@@ -154,19 +154,59 @@ h3
     display: flex
     justify-content: center
 
-@media (min-width: $tablet)
+@media (min-width: $desktop)
 
     .main
-        padding-left: max(10%, $s)
-        padding-right: max(10%, $s)
+        padding-left: max(5%, $s)
+        padding-right: max(5%, $s)
 
     .arrow-right
         margin-right: 460px
 
-    .right   
+    .right
+        padding-bottom: min(104px, 40%)
+        .project
+            width: max(620px, 40%)
         .project-container
             display: flex
+            flex-direction: row
+        .project-img
+            align-items: flex-end
+
+        .overlay-container
+            height: 40%
+       
 
     .left
+        padding-bottom: min(104px, 20%)
+        .project
+            width: min(620px, 40%)
         .project-container
             display: flex
+            flex-direction: row-reverse
+        .project-img
+            align-items: flex-start
+
+        .overlay-container
+            height: 40%
+        
+
+    .project-number
+        font-size: 48px
+
+    .projects
+        img
+
+    @keyframes spread-out
+        0%
+            height: 0%
+            width: 0%
+
+        100%
+            height: 100%
+            width: min(900px, 40%)
+
+    @media( min-width: large)
+        .main
+            padding-left: 20%
+            padding-right: 20%

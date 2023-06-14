@@ -7,27 +7,30 @@
         Feel free to try out my latest development projects and look into their code.
     </div>
     <div class="projects" data-aos="zoom-in-up">
-        <div *ngFor="let project of projects; let i = index" >
+        <div *ngFor="let project of projects; let i = index">
             <div [attr.data-aos-delay]="150 * i" [ngClass]="i % 2 === 0 ? 'right' : 'left'" class="project-img">
                 <div class="project-number">0{{i + 1}}/04</div>
-                <div class="overlay-container">
-                    <img [ngClass]="{'gray': !isHovering[i]}" src="{{ project.img }}"  (mouseover)="isHovering[i] = true">
-                    <div [ngClass]="{'overlay': isHovering[i]}">
-                        <img [ngClass]="{'d-none' :!isHovering[i]}" src="assets/img/icons/circleArrow.png">
+                <div class="project-container">
+                    <div class="overlay-container">
+                        <img [ngClass]="{'gray': !isHovering[i]}" src="{{ project.img }}"
+                            (mouseover)="isHovering[i] = true">
+                        <div [ngClass]="{'overlay': isHovering[i]}">
+                            <img [ngClass]="{'d-none' :!isHovering[i]}" src="assets/img/icons/circleArrow.png">
+                        </div>
                     </div>
-                </div>
-                <div [ngClass]="{'hide': !isHovering[i]}" class="project" >
-                    <h3>{{ project.name }}</h3>
-                    <div class="technologies">{{ project.technologies}}</div>
-                    <div class="project-description">{{ project.description }}</div>
-                    <div class="link-boxes">
-                        <a target="_blank" href="{{ project.github}}">GitHub</a>
+                    <div [ngClass]="{'hide': !isHovering[i]}" class="project">
+                        <h3>{{ project.name }}</h3>
+                        <div class="technologies">{{ project.technologies}}</div>
+                        <div class="project-description">{{ project.description }}</div>
+                        <div class="link-boxes">
+                            <a target="_blank" href="{{ project.github}}">GitHub</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
 
     <div class="arrow-container left-arrow">
         <img data-aos="fade-down-left" class="arrow" src="assets/img/icons/arrowLeft.png">

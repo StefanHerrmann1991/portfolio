@@ -19,8 +19,8 @@ $xl: 64px
 $xxl: 90px
 $xxxl: 128px
 $xxxxl: 181px
+$x-small: 320px
 $small: 390px
-
 $phone: 480px
 $tablet: 768px
 $desktop: 992px
@@ -38,6 +38,14 @@ $large: 1200px
     scroll-behavior: smooth
 body
     background-color: #F5F5F5
+
+h1
+    font-family: 'Syne'
+    font-style: normal
+    font-weight: 800
+    font-size: 45px
+    line-height: 100%
+    text-align: center
 
 h2
     font-family: 'Syne'
@@ -95,6 +103,10 @@ button
 .mobile
     display: block !important
 
+@media (min-width: $x-small)
+    h1, h2
+        font-size: 35px
+
 @media (min-width: $tablet)
     .mobile
         display: none !important
@@ -103,10 +115,30 @@ button
     .desktop-flex
         display: flex !important
 
+@media (min-width: $desktop)
+    h1
+        font-size: 78px
+
     h2
         transition: 0.5s
+        font-size: 46px
         &:hover
             color: $secondary
+
+@media (min-width: $large)
+
+
+    h1
+        font-size: 128px
+
+    h2
+        transition: 0.5s
+        font-size: 78px
+        &:hover
+            color: $secondary
+
+    div
+        font-size: $m
 
     .left-arrow
         padding-left: 480px
