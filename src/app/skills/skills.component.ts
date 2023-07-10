@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, HostBinding, HostListener } from '@angular/core';
 import AOS from 'aos';
+
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
@@ -58,10 +59,17 @@ export class SkillsComponent implements OnInit {
       'name': 'Material Design',
       'icon': 'assets/img/icons/Icons mobile s3 (9).png'
     }
-  
+
   ]
 
+  isHovered: boolean[] = Array(this.skills.length).fill(false);
 
+  startHover(index: number) {
+    this.isHovered[index] = true;
+    setTimeout(() => {
+      this.isHovered[index] = false;
+    }, 2000);
+  }
 
 
 }

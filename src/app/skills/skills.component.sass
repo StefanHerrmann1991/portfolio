@@ -16,6 +16,66 @@
         width: fit-content
         text-align: center
 
+.skill-name
+    padding-top: 14px
+    transition: background-color 0.25s ease
+
+.skill-name.is-hovered
+    color: $secondary
+    transition: color 0.25s
+
+.skill-name
+    padding-top: 14px
+    transition: background-color 0.25s ease
+    animation-name: removeHover
+    animation-duration: 0.25s
+    animation-fill-mode: forwards
+
+    &.is-hovered
+        color: $secondary
+        transition: color 0.25s
+        animation-name: applyHover
+        animation-duration: 0s
+        animation-fill-mode: forwards
+
+@keyframes applyHover
+    0%
+        color: initial
+    100%
+        color: blue
+
+@keyframes removeHover
+    0%
+        color: blue
+    100%
+        color: initial
+
+.skill-img
+    overflow: hidden
+    &.is-hovered
+        animation-name: spin
+        animation-duration: 0.35s
+        animation-iteration-count: 1
+        animation-timing-function: linear
+
+@keyframes spin
+    0%
+        transform: translateX(30px)
+
+    25%
+        transform: translateX(40px)
+        scale: 0.8
+    50%
+        transform: translateX(-30)
+        scale: 0.5
+
+    75%
+        transform: translateX(-40px)
+        scale: 0.8
+    100%
+        transform: translateX(0px)
+        scale: 1.0
+
 .skills
     padding-top: 44px
     padding-bottom: 44px
@@ -46,8 +106,6 @@
 
 @media (min-width: $desktop)
 
-
-   
     .main
         padding-left: max(5%, $s)
         padding-right: max(5%, $s)

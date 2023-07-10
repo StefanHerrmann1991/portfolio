@@ -11,10 +11,11 @@
         <div class="skill-animation" *ngFor="let skill of skills; let i = index">
             <div class="skill">
                 <div class="name-img">
-                    <img src="{{skill.icon}}">
-                    <div class="skill-name">{{skill.name}}</div>
+                    <img class="skill-img" [ngClass]="{'is-hovered': isHovered[i]}" src="{{skill.icon}}">
+                    <div class="skill-name" [ngClass]="{'is-hovered': isHovered[i]}" (mouseenter)="startHover(i)">
+                        {{skill.name}}</div>
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
 </div>

@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IntroductionComponent } from './introduction/introduction.component';
-import { HeaderComponent } from './header/header.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { JourneyComponent } from './journey/journey.component';
@@ -22,7 +21,7 @@ import { HiddenDirective } from './hidden.directive';
   declarations: [
     AppComponent,
     IntroductionComponent,
-    HeaderComponent,
+
     SkillsComponent,
     ProjectsComponent,
     JourneyComponent,
