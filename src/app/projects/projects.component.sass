@@ -156,6 +156,21 @@ h3
 
 @media (min-width: $desktop)
 
+    .right
+        .overlay-container
+            .overlay
+                img
+                    width: 75.7px
+                    height: 75.7px
+                    left: calc( -75.7px / 2 )
+    .left
+        .overlay-container
+            .overlay
+                img
+                    width: 75.7px
+                    height: 75.7px
+                    right: calc( -75.7px / 2 )
+
     .main
         padding-left: max(5%, $s)
         padding-right: max(5%, $s)
@@ -175,7 +190,6 @@ h3
 
         .overlay-container
             height: 40%
-       
 
     .left
         padding-bottom: min(104px, 20%)
@@ -189,7 +203,6 @@ h3
 
         .overlay-container
             height: 40%
-        
 
     .project-number
         font-size: 48px
