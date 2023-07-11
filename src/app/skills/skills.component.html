@@ -1,4 +1,4 @@
-<div appHidden class="main" id="skills">
+<div appHidden class="main" id="skills" [ngClass]="{'hide-content': displayService.showH2Only$ | async}">
     <div class="arrow-container left-arrow">
         <img data-aos="fade-down-left" class="arrow" src="assets/img/icons/arrowLeft.png">
     </div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { DisplayService } from './display.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,10 +9,13 @@ export class AppComponent {
   title = 'stefan-herrmann';
   isMenuOpen: boolean = false;
 
-  constructor() { }
+  constructor(private displayService: DisplayService) { }
 
-  toggleMenu(): void {
+  toggleContent() {
+    this.displayService.toggleContent();
     this.isMenuOpen = !this.isMenuOpen;
   }
+
+  
 
 }

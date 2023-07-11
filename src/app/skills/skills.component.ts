@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, HostBinding, HostListener } from '@angular/core';
 import AOS from 'aos';
+import { DisplayService } from '../display.service';
 
 @Component({
   selector: 'app-skills',
@@ -8,7 +9,7 @@ import AOS from 'aos';
 })
 export class SkillsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public displayService: DisplayService) {}
 
   ngOnInit(): void {
     AOS.init();

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import AOS from 'aos';
-
+import { DisplayService } from '../display.service';
 
 @Component({
   selector: 'app-projects',
@@ -12,11 +12,8 @@ export class ProjectsComponent implements OnInit {
   actualProject: string;
   isHovering: { [key: number]: boolean } = {};
   showTitle: number = -1;
-  constructor() {
 
-  
-  }
-
+  constructor(public displayService: DisplayService) { }
 
 
   ngOnInit(): void {

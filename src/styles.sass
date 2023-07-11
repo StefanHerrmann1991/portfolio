@@ -56,6 +56,15 @@ h2
     opacity: 0.8
     white-space: nowrap
 
+.hide-content
+    &:not(.visible-title)
+        display: none
+
+h2.active-title
+    color: red
+    background-color: blue
+
+
 @mixin flex-center
     display: flex
     justify-content: center
@@ -126,7 +135,6 @@ button
             color: $secondary
 
 @media (min-width: $large)
-
 
     h1
         font-size: 128px

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import AOS from 'aos';
+import { DisplayService } from '../display.service';
 
 @Component({
   selector: 'app-journey',
@@ -8,12 +9,10 @@ import AOS from 'aos';
 })
 export class JourneyComponent implements OnInit {
 
-  constructor() { }
+  constructor(public displayService: DisplayService) {}
 
   ngOnInit(): void {
     AOS.init();
-
-
   }
 
   journeys = [{
