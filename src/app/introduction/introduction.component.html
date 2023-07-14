@@ -1,4 +1,4 @@
-<div appHidden class="main" [ngClass]="{'hide-content height-100': displayService.showH2Only$ | async}">
+<div appHidden class="main header-padding" [ngClass]="{'hide-content height-100': displayService.showH2Only$ | async}">
     <div data-aos="slide-right" class="discription">
         <h1>Frontend<br> Developer</h1>
         <div class="border-name">
@@ -17,7 +17,7 @@
         </div>
     </div>
 </div>
-<div class="main-part" [ngClass]="{'hide-content': !displayService.isMenuOpen}">
+<div class="main-part header-padding" [ngClass]="{'hide-content': !displayService.isMenuOpen}">
     <div class="main-menu">
         <div class="title-line">
             <div class="line-container">
@@ -42,10 +42,7 @@
         </div>
     </div>
 </div>
-
-
 <app-journey></app-journey>
 <app-skills></app-skills>
 <app-projects></app-projects>
-
 <app-contact-form></app-contact-form>

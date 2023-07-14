@@ -1,11 +1,12 @@
 @import '../styles.sass'
 
-.page    
-    height: 100svh
-    height: 100vh
-    display: flex
-    flex-direction: column
-    justify-content: space-between
+
+
+.header
+    position: fixed
+    top: 0
+    z-index: 1000
+    width: calc( 100% - 2*(max(10%, 23px)) )
 
 .costom
     background-color: $background

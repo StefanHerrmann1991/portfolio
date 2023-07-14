@@ -4,7 +4,6 @@
     display: flex
     align-items: flex-end
     flex-direction: column
-
     .project
         display: flex
         align-items: flex-end
@@ -32,7 +31,6 @@
                 transform: rotate(90deg)
                 animation-delay: 0.5s
                 animation: move-arrow 0.5s ease-in-out forwards
-
     .project-description
         text-align: right
 
@@ -156,20 +154,13 @@ h3
 
 @media (min-width: $desktop)
 
-    .right
+    .right, .left
         .overlay-container
             .overlay
                 img
                     width: 75.7px
                     height: 75.7px
                     left: calc( -75.7px / 2 )
-    .left
-        .overlay-container
-            .overlay
-                img
-                    width: 75.7px
-                    height: 75.7px
-                    right: calc( -75.7px / 2 )
 
     .main
         padding-left: max(5%, $s)
