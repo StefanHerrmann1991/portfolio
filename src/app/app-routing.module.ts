@@ -9,7 +9,6 @@ const routes: Routes = [
 { path: '', component: IntroductionComponent },
 { path: 'legal-notice', component: LegalNoticeComponent },
 { path: 'about', component: JourneyComponent}
-
 ];
 
 @NgModule({

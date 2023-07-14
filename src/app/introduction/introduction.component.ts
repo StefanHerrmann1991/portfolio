@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DisplayService } from '../display.service';
 @Component({
   selector: 'app-introduction',
   templateUrl: './introduction.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroductionComponent implements OnInit {
 
-  constructor() { }
+  constructor(public displayService: DisplayService) {}
 
   ngOnInit(): void {
   }

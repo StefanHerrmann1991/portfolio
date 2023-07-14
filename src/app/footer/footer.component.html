@@ -1,12 +1,18 @@
-<div class="main">    
-    <div class="icons">
-        <div *ngFor="let socialLogo of socialLogos">
-            <a href="{{socialLogo.url}}" target="_blank">
-                <img src="{{socialLogo.logo}}">
-            </a>
+<div class="main">
+    <div class="top-section">
+        <div class="left-side">
+            <img class="logo" src="assets/img/profile/logo.png" [ngClass]="{'hide-content': displayService.showH2Only$ | async}">
+            <a class="mail" href="mailto:stefan-herrmann@posteo.de">stefan-herrmann@posteo.de</a>
+        </div>
+        <div class="right-side">
+            <div class="icons">
+                <div *ngFor="let socialLogo of socialLogos">
+                    <a href="{{socialLogo.url}}" target="_blank">
+                        <img src="{{socialLogo.logo}}">
+                    </a>
+                </div>
+            </div>
+            <a class="legal-notice" routerLink="/legal-notice" routerLinkActive="active">Imprint | Legal Notice</a>
         </div>
     </div>
-    <img class="logo" src="assets/img/profile/logo.png">
-    <a class="mail" href="mailto:stefan-herrmann@posteo.de">stefan-herrmann@posteo.de</a>
-    <a class="legal-notice" routerLink="/legal-notice" routerLinkActive="active">Imprint | Legal Notice</a>
 </div>

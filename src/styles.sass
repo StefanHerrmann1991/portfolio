@@ -19,7 +19,7 @@ $xl: 64px
 $xxl: 90px
 $xxxl: 128px
 $xxxxl: 181px
-$x-small: 320px
+$x-small: 400px
 $small: 390px
 $phone: 480px
 $tablet: 768px
@@ -59,11 +59,6 @@ h2
 .hide-content
     &:not(.visible-title)
         display: none
-
-h2.active-title
-    color: red
-    background-color: blue
-
 
 @mixin flex-center
     display: flex
@@ -112,7 +107,7 @@ button
 .mobile
     display: block !important
 
-@media (min-width: $x-small)
+@media (max-width: $x-small)
     h1, h2
         font-size: 35px
 

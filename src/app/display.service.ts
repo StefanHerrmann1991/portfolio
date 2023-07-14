@@ -5,17 +5,19 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class DisplayService {
+
+  isMenuOpen : boolean = false;
+
   private _showH2Only = new BehaviorSubject<boolean>(false);
   showH2Only$ = this._showH2Only.asObservable();
 
-  private _isMenuOpen = new BehaviorSubject<boolean>(false);
-  isMenuOpen$ = this._isMenuOpen.asObservable();
-
   toggleContent() {
     this._showH2Only.next(!this._showH2Only.getValue());
+    this.toggleMenu();
   }
 
   toggleMenu() {
-    this._isMenuOpen.next(!this._isMenuOpen.getValue());
+    this.isMenuOpen = !this.isMenuOpen
+    console.log(this.isMenuOpen)
   }
 }

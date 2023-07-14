@@ -1,36 +1,39 @@
-<div class="main" id="contactForm">
-    <img class="triangle" src="assets/img/icons/triangle.png">
-    <div>
-        <h2 class="greeting">Say hi</h2>
-        <h3>Want to discuss a new project?</h3>
-        <div class="greeting">Say hello! let's discuss your ideas and make it happen</div>
-        <form (submit)="sendMail()" ngNativeValidate #myForm="ngForm">
-            <div class="contact">
-                <div class="contact-data">
-                    <input required type="name" [(ngModel)]="name" name="name" placeholder="Your name" #nameModel="ngModel">
-                    <img src="assets/img/icons/valid.png" *ngIf="nameModel.valid && nameModel.touched" class="valid">
-                    <img src="assets/img/icons/invalid.png" *ngIf="nameModel.invalid && nameModel.touched" class="invalid">
-                </div>
-                <div class="contact-data">
-                    <input required type="email" [(ngModel)]="email" email="true" name="email" placeholder="Your email" #emailModel="ngModel">
-                    <img src="assets/img/icons/valid.png" *ngIf="emailModel.valid && emailModel.touched" class="valid">
-                    <img src="assets/img/icons/invalid.png" *ngIf="emailModel.invalid && emailModel.touched" class="invalid">
-                </div>
-                <div class="contact-data">
-                    <textarea required type="message" [(ngModel)]="message" name="message" placeholder="Your message" #messageModel="ngModel">
+<img class="triangle" src="assets/img/icons/triangle.png">
+<h2 class="greeting">Say hi</h2>
+<div class="main" id="contactForm" [ngClass]="{'hide-content': displayService.showH2Only$ | async}">
+    <h3>Want to discuss a new project?</h3>
+    <div class="greeting">Say hello! let's discuss your ideas and make it happen</div>
+    <form (submit)="sendMail()" ngNativeValidate #myForm="ngForm">
+        <div class="contact">
+            <div class="contact-data">
+                <input required type="name" [(ngModel)]="name" name="name" placeholder="Your name" #nameModel="ngModel">
+                <img src="assets/img/icons/valid.png" *ngIf="nameModel.valid && nameModel.touched" class="valid">
+                <img src="assets/img/icons/invalid.png" *ngIf="nameModel.invalid && nameModel.touched" class="invalid">
+            </div>
+            <div class="contact-data">
+                <input required type="email" [(ngModel)]="email" email="true" name="email" placeholder="Your email"
+                    #emailModel="ngModel">
+                <img src="assets/img/icons/valid.png" *ngIf="emailModel.valid && emailModel.touched" class="valid">
+                <img src="assets/img/icons/invalid.png" *ngIf="emailModel.invalid && emailModel.touched"
+                    class="invalid">
+            </div>
+            <div class="contact-data">
+                <textarea required type="message" [(ngModel)]="message" name="message" placeholder="Your message"
+                    #messageModel="ngModel">
                     </textarea>
-                    <img src="assets/img/icons/valid.png" *ngIf="messageModel.valid && messageModel.touched" class="valid">
-                    <img src="assets/img/icons/invalid.png" *ngIf="messageModel.invalid && messageModel.touched" class="invalid">
+                <img src="assets/img/icons/valid.png" *ngIf="messageModel.valid && messageModel.touched" class="valid">
+                <img src="assets/img/icons/invalid.png" *ngIf="messageModel.invalid && messageModel.touched"
+                    class="invalid">
+            </div>
+        </div>
+        <div class="btn-container">
+            <button class="send-btn" #sendButton>
+                <div [ngClass]="{'hide' : !isLoading}">
+                    <div class="lds-dual-ring"></div>
                 </div>
-            </div>
-            <div class="btn-container">
-                <button class="send-btn" #sendButton>
-                    <div [ngClass]="{'hide' : !isLoading}">
-                        <div class="lds-dual-ring"></div>
-                    </div>
-                    <div [ngClass]="{'hide' : isLoading}">Send Message</div>
-                </button>
-            </div>
-        </form>
-    </div>
+                <div [ngClass]="{'hide' : isLoading}">Send Message</div>
+            </button>
+        </div>
+    </form>
 </div>
+<app-footer></app-footer>

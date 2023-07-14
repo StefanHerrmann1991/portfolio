@@ -1,7 +1,6 @@
-<div appHidden class="main" id="journey">
-    <h2 data-aos="slide-left" data-aos-delay="200" class="visible-title"
-        [ngClass]="{'active-menu': displayService.isMenuOpen$ | async}">About me</h2>
-    <div class="content" [ngClass]="{'hide-content': displayService.showH2Only$ | async}">
+<div appHidden class="main" id="journey" [ngClass]="{'hide-content': displayService.showH2Only$ | async}">
+    <h2 data-aos="slide-left" data-aos-delay="200">About me</h2>
+    <div class="content">
         <div class="about-me">
             <div *ngFor="let journey of journeys; let i = index">
                 <div data-aos="fade-up-left" [attr.data-aos-delay]="200 * i"> {{journey.text}} </div>

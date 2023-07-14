@@ -16,7 +16,6 @@ export class JourneyComponent implements OnInit {
   }
 
   journeys = [{
-
     'text': "I'm Stefan Herrmann, a Front-end Developer driven by a love for coding based in Berlin Germany. During my master's in Life Science Engineering, I discovered the power of algorithms and analytical thinking in solving various challenges."
   }
 

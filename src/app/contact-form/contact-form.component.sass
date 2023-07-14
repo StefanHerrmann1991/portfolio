@@ -3,6 +3,16 @@
 div
     color: #FFFCF3
 
+.triangle
+    display: block
+
+.greeting
+    background-color: black
+    opacity: 1.0
+    color: white
+    padding-left: max(5%, $s)
+    padding-right: max(5%, $s)
+
 input, textarea
     background-color: black
     border: none
@@ -44,7 +54,6 @@ input:focus, textarea:focus
     position: relative
 
 h3
-
     font-family: 'Overpass'
     font-style: normal
     font-weight: 700
@@ -57,7 +66,7 @@ h3
 
 .greeting
     text-align: center
-    padding-bottom: $ml
+
 .main
     background-color: black !important
     position: relative
@@ -87,7 +96,15 @@ h3
     .contact-data
         width: max(340px, 40%)
 
-@media (min-width: $desktop)
+@media (min-width: $tablet)
+
+    .main
+        padding-left: max(5%, $s)
+        padding-right: max(5%, $s)
 
     input, textarea
         width: calc( 100% - 21px )
+
+    h2
+        text-align: left !important
+        justify-content: flex

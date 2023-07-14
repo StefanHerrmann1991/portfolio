@@ -2,8 +2,20 @@
 
 .main
     @include flex-center-col
-
     background-color: black
+    padding-left: max(5%, $s)
+    padding-right: max(5%, $s)
+
+.top-section
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+
+.left-side, .right-side
+    display: flex
+    flex-direction: column
+    align-items: center
 
 .icons
     display: flex
@@ -32,3 +44,37 @@ a
 .logo
     padding-top: 28px
     padding-bottom: 28px
+
+@media (min-width: $tablet)
+
+    .mail
+        padding-top: 10px
+
+    .top-section
+        flex-direction: row
+        justify-content: space-between
+
+    .left-side
+        align-items: flex-start
+
+    .right-side
+        align-items: flex-end
+    img
+        height: 40px
+        width: 40px
+
+    .icons
+        gap: 47px
+
+    a
+        color: white
+    .mail
+        font-size: 23px
+
+    .legal-notice
+        padding-bottom: $l
+        padding-top: $s
+        font-size: 16px
+
+    .logo
+        padding-bottom: 28px

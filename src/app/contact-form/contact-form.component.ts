@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { NgForm } from '@angular/forms'; // Import NgForm here
-
+import { DisplayService } from '../display.service';
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
@@ -17,7 +17,7 @@ export class ContactFormComponent implements OnInit, AfterViewInit {
   isLoading: boolean = false;
   isDelivered: boolean = false;
 
-  constructor() { }
+  constructor(public displayService: DisplayService) { }
 
   ngOnInit(): void {
   }
