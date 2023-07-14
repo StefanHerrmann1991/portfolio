@@ -38,7 +38,7 @@
     display: flex
     align-items: flex-start
     flex-direction: column
-    
+
     .project
         display: flex
         align-items: flex-start
@@ -154,14 +154,6 @@ h3
 
 @media (min-width: $desktop)
 
-    .right, .left
-        .overlay-container
-            .overlay
-                img
-                    width: 75.7px
-                    height: 75.7px
-                    left: calc( -75.7px / 2 )
-
     .main
         padding-left: max(5%, $s)
         padding-right: max(5%, $s)
@@ -169,36 +161,32 @@ h3
     .arrow-right
         margin-right: 460px
 
+
+    .project
+        width: 40%
+
     .right
         padding-bottom: min(104px, 40%)
-        .project
-            width: max(620px, 40%)
         .project-container
             display: flex
             flex-direction: row
         .project-img
             align-items: flex-end
-
         .overlay-container
             height: 40%
 
     .left
-        padding-bottom: min(104px, 20%)
-        .project
-            width: min(620px, 40%)
+        padding-bottom: min(104px, 40%)
         .project-container
             display: flex
             flex-direction: row-reverse
         .project-img
             align-items: flex-start
-
         .overlay-container
             height: 40%
 
     .project-number
         font-size: 48px
-
-
 
     @keyframes spread-out
         0%
