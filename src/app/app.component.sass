@@ -1,13 +1,6 @@
 @import '../styles.sass'
 
 
-
-.header
-    position: fixed
-    top: 0
-    z-index: 1000
-    width: calc( 100% - 2*(max(10%, 23px)) )
-
 .costom
     background-color: $background
     color: black
@@ -16,6 +9,10 @@
     width: 40px
 
 .header
+    position: fixed
+    top: 0
+    z-index: 1000
+    width: calc( 100% - 2*(max(10%, 23px)) )
     background-color: $background
     display: flex
     justify-content: space-between
@@ -23,7 +20,7 @@
     padding-left: $s
     padding-right: $s
     padding-top: $m
-    padding-bottom: calc($m + $l)
+    padding-bottom: $m
     img
         height: 40px
         width: 40px

@@ -1,4 +1,4 @@
-<div class="page">
+<div class="page" [ngClass]="{'page-end': isMenuOpen}">
     <div class="header">
         <img class="logo" routerLink="/" src="assets/img/profile/logo.png">
         <button class="burger" (click)="toggleContent()">
@@ -6,6 +6,6 @@
         </button>
     </div>
     <div>
-        <router-outlet></router-outlet>  
+        <router-outlet></router-outlet>
     </div>
 </div>
