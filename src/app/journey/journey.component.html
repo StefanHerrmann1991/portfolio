@@ -1,5 +1,5 @@
 <div appHidden class="main" id="journey" [ngClass]="{'hide-content': displayService.showH2Only$ | async}">
-    <h2 data-aos="slide-left" data-aos-delay="200">About me</h2>
+    <h2 appHidden data-aos="slide-left" data-aos-delay="200">About me</h2>
     <div class="content">
         <div class="about-me">
             <div *ngFor="let journey of journeys; let i = index">

@@ -7,15 +7,12 @@ import { DisplayService } from './display.service';
 })
 export class AppComponent {
   title = 'stefan-herrmann';
-  isMenuOpen: boolean = false;
 
-  constructor(private displayService: DisplayService) { }
+
+  constructor(public displayService: DisplayService) { }
 
   toggleContent() {
-    this.displayService.toggleContent();
-    this.isMenuOpen = !this.isMenuOpen;
+    this.displayService.toggleContent();    
   }
-
-  
 
 }

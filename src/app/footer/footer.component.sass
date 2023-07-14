@@ -47,6 +47,9 @@ a
 
 @media (min-width: $tablet)
 
+    .main
+        align-items: flex-end
+
     .mail
         padding-top: 10px
 
@@ -74,8 +77,18 @@ a
 
     .legal-notice
         padding-bottom: $l
-        padding-top: $s
+        padding-top: 0px
         font-size: 16px
 
     .logo
         padding-bottom: 28px
+
+@media (min-width: $tablet)
+    .logo
+        padding-top: 17px
+        padding-bottom: 17px
+    .legal-notices
+        padding-top: 0px
+        padding-bottom: 0px
+        display: flex
+        justify-content: flex-end

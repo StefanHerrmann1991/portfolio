@@ -1,8 +1,8 @@
-<div class="page" [ngClass]="{'page-end': isMenuOpen}">
+<div class="page" [ngClass]="{'page-end': displayService.isMenuOpen}">
     <div class="header">
         <img class="logo" routerLink="/" src="assets/img/profile/logo.png">
         <button class="burger" (click)="toggleContent()">
-            <mat-icon appearance="outline" class="material-icons costom">{{ isMenuOpen ? "close" : "menu"}}</mat-icon>
+            <mat-icon appearance="outline" class="material-icons costom">{{ displayService.isMenuOpen ? "close" : "menu"}}</mat-icon>
         </button>
     </div>
     <div>

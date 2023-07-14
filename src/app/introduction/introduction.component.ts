@@ -7,9 +7,11 @@ import { DisplayService } from '../display.service';
 })
 export class IntroductionComponent implements OnInit {
 
-  constructor(public displayService: DisplayService) {}
-
+  constructor(public displayService: DisplayService) { }
   ngOnInit(): void {
   }
 
+  toggleContent() {
+    this.displayService.toggleContent();
+  }
 }
