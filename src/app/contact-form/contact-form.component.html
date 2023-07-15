@@ -27,12 +27,18 @@
             </div>
         </div>
         <div class="btn-container">
+            <div></div>
             <button class="send-btn" #sendButton>
                 <div [ngClass]="{'hide' : !isLoading}">
                     <div class="lds-dual-ring"></div>
                 </div>
                 <div [ngClass]="{'hide' : isLoading}">Send Message</div>
             </button>
+            <a href="#pagesHead" class="desktop" (mouseenter)="changeImageSource(true)"
+                (mouseleave)="changeImageSource(false)">
+                <img class="arrow-up" [src]="imageSource">
+            </a>
+
         </div>
     </form>
 </div>

@@ -26,6 +26,16 @@ export class ContactFormComponent implements OnInit, AfterViewInit {
     // Here is a safe place to access your ViewChild properties.
   }
 
+
+
+  imageSource = 'assets/img/icons/arrowWhite.png';
+
+  changeImageSource(hovered: boolean): void {
+    if (hovered) this.imageSource = 'assets/img/icons/arrowWhite2.png';
+    else this.imageSource = 'assets/img/icons/arrowWhite.png';
+
+  }
+
   async sendMail() {
     this.isLoading = true;
 
