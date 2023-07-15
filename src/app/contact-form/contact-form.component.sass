@@ -87,12 +87,11 @@ h3
 .arrow-up
     width: 53px
     height: 76px
-    
 
 .btn-container
     width: 100%
     display: flex
-    justify-content: space-between
+    justify-content: center
 
     .send-btn
         border: 2px solid #FFFCF3
@@ -111,10 +110,10 @@ h3
     .contact-data
         width: max(340px, 40%)
 
-
-
-    
 @media (min-width: $tablet)
+
+    .btn-container
+        justify-content: space-between
 
     .main
         padding-left: max(5%, $s)

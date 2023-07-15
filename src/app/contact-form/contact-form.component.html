@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="btn-container">
-            <div></div>
+            <div class="desktop"></div>
             <button class="send-btn" #sendButton>
                 <div [ngClass]="{'hide' : !isLoading}">
                     <div class="lds-dual-ring"></div>
@@ -38,7 +38,6 @@
                 (mouseleave)="changeImageSource(false)">
                 <img class="arrow-up" [src]="imageSource">
             </a>
-
         </div>
     </form>
 </div>

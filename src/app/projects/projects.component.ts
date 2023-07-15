@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, Renderer2, HostListener } from '@angular/core';
 import AOS from 'aos';
 import { DisplayService } from '../display.service';
 
@@ -13,13 +13,41 @@ export class ProjectsComponent implements OnInit {
   isHovering: { [key: number]: boolean } = {};
   showTitle: number = -1;
 
-  constructor(public displayService: DisplayService) { }
-
+  constructor(public displayService: DisplayService, private el: ElementRef) { }
 
   ngOnInit(): void {
     AOS.init();
+
+    // Initialize isHovering for each project
+    this.projects.forEach((project, index) => {
+      this.isHovering[index] = false;
+    });
   }
 
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    if (window.innerWidth <= 768) {
+      const tags = this.el.nativeElement.querySelectorAll('.project-number');
+
+      tags.forEach((tag, index) => {
+        if (this.isInViewport(tag)) {
+          this.isHovering[index] = true;
+        } else {
+          this.isHovering[index] = false;
+        }
+      });
+    }
+  }
+
+  isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
   projects: any[] = [
     {
       'name': 'El Pollo Loco',
