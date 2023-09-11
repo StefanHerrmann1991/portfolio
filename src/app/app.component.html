@@ -1,11 +1,12 @@
-<div class="page" [ngClass]="{'page-end': displayService.isMenuOpen}">
-    <div class="header">
+<div class="page" [ngClass]="{ 'space-between': displayService.isMenuOpen, 'flex-end': !displayService.isMenuOpen }">
+    <div class="header" [ngClass]="{ 'static': displayService.isMenuOpen, 'fixed': !displayService.isMenuOpen }">
         <img class="logo" routerLink="/" src="assets/img/profile/logo.png">
         <button class="burger" (click)="toggleContent()">
             <mat-icon appearance="outline" class="material-icons costom">{{ displayService.isMenuOpen ? "close" : "menu"}}</mat-icon>
         </button>
     </div>
-    <div>
+    <div class="page-menu">
         <router-outlet></router-outlet>
     </div>
+    <app-contact-form></app-contact-form>
 </div>

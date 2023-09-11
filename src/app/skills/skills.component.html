@@ -12,7 +12,7 @@
         <div class="skill-animation" *ngFor="let skill of skills; let i = index">
             <div class="skill">
                 <div class="name-img">
-                    <img class="skill-img" [ngClass]="{'is-hovered': isHovered[i]}" src="{{skill.icon}}">
+                    <img class="skill-img" [ngClass]="{'is-hovered': isHovered[i]}" src="{{skill.icon}}" (mouseenter)="startHover(i)">
                     <div class="skill-name" [ngClass]="{'is-hovered': isHovered[i]}" (mouseenter)="startHover(i)">
                         {{skill.name}}</div>
                 </div>

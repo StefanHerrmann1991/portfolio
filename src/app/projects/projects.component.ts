@@ -17,27 +17,24 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     AOS.init();
-
     // Initialize isHovering for each project
-    this.projects.forEach((project, index) => {
+    this.projects.forEach((_, index) => {
       this.isHovering[index] = false;
     });
   }
+
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     if (window.innerWidth <= 768) {
       const tags = this.el.nativeElement.querySelectorAll('.project-number');
-
       tags.forEach((tag, index) => {
-        if (this.isInViewport(tag)) {
-          this.isHovering[index] = true;
-        } else {
-          this.isHovering[index] = false;
-        }
+        if (this.isInViewport(tag)) this.isHovering[index] = true;
+        else this.isHovering[index] = false;
       });
     }
   }
+
 
   isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -48,6 +45,8 @@ export class ProjectsComponent implements OnInit {
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
+
+
   projects: any[] = [
     {
       'name': 'El Pollo Loco',

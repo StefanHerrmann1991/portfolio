@@ -69,8 +69,7 @@ export class SkillsComponent implements OnInit {
     this.isHovered[index] = true;
     setTimeout(() => {
       this.isHovered[index] = false;
-    }, 2000);
-  }
+    }, 2000);}
 
 
 }
