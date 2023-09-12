@@ -9,7 +9,7 @@
     <div class="projects" data-aos="zoom-in-up">
         <div *ngFor="let project of projects; let i = index">
             <div [attr.data-aos-delay]="150 * i" [ngClass]="i % 2 === 0 ? 'right' : 'left'" class="project-img">
-                <div class="project-number">0{{i + 1}}/03</div>
+                <div class="project-number">0{{i + 1}}/0{{projects.length}}</div>
                 <div class="project-container">
                     <a href="{{project.path}}" target="_blank" class="overlay-container">
                         <img [ngClass]="{'gray': !isHovering[i]}" src="{{ project.img }}"

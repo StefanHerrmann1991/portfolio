@@ -71,14 +71,14 @@ export class ProjectsComponent implements OnInit {
       'img': 'assets/img/projects/portfolio.png',
       'technologies': 'Angular | TypeScript | SASS'
     }
-    ,/*  {
+    , {
       'name': 'Pokedex',
       'description': 'A JavaScript-implemented Pokedex leveraging REST API.',
       'path': 'https://stefan-herrmann.developerakademie.net/Pokedex',
-      'github':'https://github.com/StefanHerrmann1991/Pokedex',
-      'img': 'assets/img/projects/pokedex.jpg',      
+      'github': 'https://github.com/StefanHerrmann1991/Pokedex',
+      'img': 'assets/img/projects/pokedex.jpg',
       'technologies': 'JavaScript | HTML | SASS | Api'
-    } */
+    }
   ]
   showProjects(project: string) {
 
