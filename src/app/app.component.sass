@@ -1,5 +1,8 @@
 @import '../styles.sass'
 
+.menu-pdg
+    padding-top: 150px
+
 .costom
     background-color: $background
     color: black
@@ -15,7 +18,6 @@
 .page
     display: flex
     justify-content: space-between
-
 
 .header
     top: 0
@@ -74,12 +76,18 @@
     align-items: center
 
 @media (min-width: $tablet)
+    .menu-pdg
+        padding-top: 200px
+
     .header
         padding-left: max(10%, $s)
         padding-right: max(10%, $s)
         width: calc( 100% - 2*(max(10%, $s)))
 
 @media (min-width: $large)
+
+    .menu-pdg
+        padding-top: 250px
 
     .header
         img

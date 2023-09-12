@@ -31,7 +31,7 @@ $large: 1200px
     height: 100vh
     display: flex
     flex-direction: column
- 
+
 .page-end
     display: flex
     justify-content: flex-end
@@ -107,8 +107,8 @@ button
     padding-top: $s
     padding-bottom: $xl
     .arrow
-        width: 180px
-        height: 180px
+        width: 120px
+        height: 120px
 .desktop
     display: none !important
 
@@ -132,6 +132,16 @@ button
         display: flex !important
 
 @media (min-width: $desktop)
+
+    .arrow-container
+        display: flex
+        justify-content: center
+        padding-top: $s
+        padding-bottom: $xl
+        .arrow
+            width: 180px
+            height: 180px
+
     h1
         font-size: 78px
 
