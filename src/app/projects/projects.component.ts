@@ -53,7 +53,7 @@ export class ProjectsComponent implements OnInit {
       'description': 'A JavaScript-based, object-oriented jump-and-run game. Help Pepe to rescue his wife from the bad chickens.',
       'path': 'https://stefan-herrmann.developerakademie.net/ElPolloLoco',
       'github': 'https://github.com/StefanHerrmann1991/El-Pollo-Loco',
-      'img': 'assets/img/projects/El Polo Loco.png',
+      'img': 'assets/img/projects/el-pollo-loco.png',
       'technologies': 'JavaScript | HTML | CSS'
     },
     {
@@ -78,7 +78,13 @@ export class ProjectsComponent implements OnInit {
       'github': 'https://github.com/StefanHerrmann1991/Pokedex',
       'img': 'assets/img/projects/pokedex.jpg',
       'technologies': 'JavaScript | HTML | SASS | Api'
-    }
+    },
+    {'name': 'DA-Bubble',
+    'description': 'An Angular based Slack-Clone.',
+    'path': 'https://dabubble-708.developerakademie.net/angular-projects/da-bubble/login',
+    'github': 'https://github.com/StefanHerrmann1991/DA-Bubble',
+    'img': 'assets/img/projects/da-bubble.png',
+    'technologies': 'Angular | Firebase | SCSS | Angular Material'}
   ]
   showProjects(project: string) {
 
