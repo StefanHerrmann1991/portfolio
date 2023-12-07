@@ -49,6 +49,14 @@ export class ProjectsComponent implements OnInit {
 
   projects: any[] = [
     {
+      'name': 'DA-Bubble',
+      'description': 'An Angular based Slack-Clone.',
+      'path': 'https://dabubble-708.developerakademie.net/angular-projects/da-bubble/login',
+      'github': 'https://github.com/StefanHerrmann1991/DA-Bubble',
+      'img': 'assets/img/projects/da-bubble.png',
+      'technologies': 'Angular | Firebase | SCSS | Angular Material'
+    },
+    {
       'name': 'El Pollo Loco',
       'description': 'A JavaScript-based, object-oriented jump-and-run game. Help Pepe to rescue his wife from the bad chickens.',
       'path': 'https://stefan-herrmann.developerakademie.net/ElPolloLoco',
@@ -71,7 +79,9 @@ export class ProjectsComponent implements OnInit {
       'img': 'assets/img/projects/portfolio.png',
       'technologies': 'Angular | TypeScript | SASS'
     }
-    , {
+    ,
+
+    {
       'name': 'Pokedex',
       'description': 'A JavaScript-implemented Pokedex leveraging REST API.',
       'path': 'https://stefan-herrmann.developerakademie.net/Pokedex',
@@ -79,12 +89,6 @@ export class ProjectsComponent implements OnInit {
       'img': 'assets/img/projects/pokedex.jpg',
       'technologies': 'JavaScript | HTML | SASS | Api'
     },
-    {'name': 'DA-Bubble',
-    'description': 'An Angular based Slack-Clone.',
-    'path': 'https://dabubble-708.developerakademie.net/angular-projects/da-bubble/login',
-    'github': 'https://github.com/StefanHerrmann1991/DA-Bubble',
-    'img': 'assets/img/projects/da-bubble.png',
-    'technologies': 'Angular | Firebase | SCSS | Angular Material'}
   ]
   showProjects(project: string) {
 
