@@ -1,4 +1,5 @@
 <img class="triangle" src="assets/img/icons/triangle.png">
+<div [ngClass]="{'email-delivered': isDelivered, 'hide' : !isDelivered}"> Your E-Mail was successfully delivered. Thank you for consulting me.</div>
 <h2 class="greeting">Say hi</h2>
 <div class="main" id="contactForm" [ngClass]="{'hide-content': displayService.showH2Only$ | async}">
     <h3>Want to discuss a new project?</h3>
@@ -30,7 +31,14 @@
             <div class="desktop"></div>
             <button class="send-btn" #sendButton>
                 <div [ngClass]="{'hide' : !isLoading}">
-                    <div class="lds-dual-ring"></div>
+                    <div class="spinner">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
                 </div>
                 <div [ngClass]="{'hide' : isLoading}">Send Message</div>
             </button>
@@ -39,6 +47,8 @@
                 <img class="arrow-up" [src]="imageSource">
             </a>
         </div>
+      
+          
     </form>
 </div>
 <app-footer></app-footer>

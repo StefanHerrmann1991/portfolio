@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { NgForm } from '@angular/forms'; // Import NgForm here
 import { DisplayService } from '../display.service';
+
+
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
@@ -48,7 +50,7 @@ export class ContactFormComponent implements OnInit, AfterViewInit {
     fd.append('name', this.name)
     fd.append('email', this.email)
     fd.append('message', this.message)
-    await fetch('https://stefan-herrmann.developerakademie.net/send_mail/send_mail.php',
+    await fetch('https://stefan-herrmann.org/send_mail/send_mail.php',
       {
         method: 'POST',
         body: fd
