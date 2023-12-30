@@ -7,7 +7,7 @@
         </button>
     </div>
     <div class="page-menu" [ngClass]="{'menu-pdg' : !displayService.isMenuOpen}">
-        <router-outlet></router-outlet>
+        <router-outlet></router-outlet>        
     </div>
-    <app-contact-form></app-contact-form>
+    <app-contact-form *ngIf="!isLegalNoticeRoute"></app-contact-form>
 </div>
