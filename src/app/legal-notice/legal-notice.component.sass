@@ -1,25 +1,34 @@
 @import '../../styles.sass'
-    
+
 .main
     background-color: black
-    padding-left: $s
-    padding-right: $s
     padding-bottom: $l
 
-div
-    color: white
-p
-    color: white
-h1
+div, p, h1
     color: white
 
-h2 
+a
+    color: $secondary
+    cursor: pointer
+
+a, h2
+    word-wrap: break-word
+    white-space: normal
+    overflow: hidden
+    text-overflow: ellipsis
+h2
     text-align: start
     padding-bottom: $m
     padding-top: $xl
+    font-size: 44px
+
+    max-width: 100%
 h3
     padding-bottom: $s
     padding-top: $l
-   
-a 
+    font-size: 26px
+    overflow: hidden
+    text-overflow: ellipsis
+
+a
     text-decoration: none
