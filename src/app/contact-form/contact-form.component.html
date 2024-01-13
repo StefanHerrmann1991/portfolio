@@ -46,17 +46,17 @@
         </div>
         <div class="btn-container">
             <div class="desktop"></div>
-            <button class="send-btn" #sendButton [disabled]="!agreePrivacyPolicy || myForm.invalid">
-
-                <div [ngClass]="{'hide' : isLoading}">Send Message</div>
+            <button class="send-btn" #sendButton [disabled]="isLoading || isDelivered || !agreePrivacyPolicy" (click)="sendMail()">
+                <div *ngIf="!isDelivered" [ngClass]="{'hide' : isLoading}">Send Message</div>
+                <div *ngIf="isDelivered" class="email-sent-indicator">                  
+                    ✓ Email Sent
+                </div>
             </button>
             <a href="#pagesHead" class="desktop" (mouseenter)="changeImageSource(true)"
                 (mouseleave)="changeImageSource(false)">
                 <img class="arrow-up" [src]="imageSource">
             </a>
         </div>
-
-
     </form>
 </div>
 <div [ngClass]="{'hide' : !isLoading}">

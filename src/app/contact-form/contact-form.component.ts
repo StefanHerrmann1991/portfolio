@@ -33,16 +33,15 @@ export class ContactFormComponent implements OnInit, AfterViewInit {
 
 
   togglePrivacyPolicy() {
-    if (this.agreePrivacyPolicy) {   
+    if (this.agreePrivacyPolicy) {
       this.privacyPolicyInteracted = true;
     }
     this.agreePrivacyPolicy = !this.agreePrivacyPolicy;
-    this.privacyPolicyTouched = true;   
+    this.privacyPolicyTouched = true;
     if (!this.agreePrivacyPolicy) {
       this.formSubmitted = true;
     }
   }
-
 
 
   onSubmit() {
@@ -61,11 +60,9 @@ export class ContactFormComponent implements OnInit, AfterViewInit {
 
   async sendMail() {
     this.isLoading = true;
-
     this.myForm.controls['name'].disable();
     this.myForm.controls['email'].disable();
     this.myForm.controls['message'].disable();
-
     // Animation anzeigen
     let fd = new FormData();
     fd.append('name', this.name)
@@ -89,8 +86,5 @@ export class ContactFormComponent implements OnInit, AfterViewInit {
     this.isLoading = false;
     this.isDelivered = true;
     this.myForm.resetForm();
-    setTimeout(() => {
-      this.isDelivered = false;
-    }, 2500);
   }
 }
