@@ -51,23 +51,23 @@ export class ProjectsComponent implements OnInit {
     {
       'name': 'DA-Bubble',
       'description': 'An Angular based Slack-Clone.',
-      'path': 'https://dabubble-708.developerakademie.net/angular-projects/da-bubble/login',
+      'path': 'https://da-bubble.stefan-herrmann.org/login',
       'github': 'https://github.com/StefanHerrmann1991/DA-Bubble',
       'img': 'assets/img/projects/da-bubble.png',
-      'technologies': 'Angular | Firebase | SCSS | Angular Material'
+      'technologies': 'Angular | TypeScript | Firebase | SCSS | Angular Material'
     },
     {
       'name': 'El Pollo Loco',
       'description': 'A JavaScript-based, object-oriented jump-and-run game. Help Pepe to rescue his wife from the bad chickens.',
-      'path': 'https://stefan-herrmann.developerakademie.net/ElPolloLoco',
+      'path': 'https://el-pollo-loco.stefan-herrmann.org/index.html',
       'github': 'https://github.com/StefanHerrmann1991/El-Pollo-Loco',
       'img': 'assets/img/projects/el-pollo-loco.png',
-      'technologies': 'JavaScript | HTML | CSS'
+      'technologies': 'JavaScript | HTML | CSS | OOP'
     },
     {
       'name': 'Join',
       'description': 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      'path': 'http://stefan-herrmann.developerakademie.net/Join/main/00login-register/login.html',
+      'path': 'https://join.stefan-herrmann.org/Join/main/00login-register/login.html',
       'github': 'https://github.com/StefanHerrmann1991/Join',
       'img': 'assets/img/projects/join.png',
       'technologies': 'JavaScript | HTML | SASS'
@@ -79,16 +79,6 @@ export class ProjectsComponent implements OnInit {
       'img': 'assets/img/projects/portfolio.png',
       'technologies': 'Angular | TypeScript | SASS'
     }
-    ,
-
-    {
-      'name': 'Pokedex',
-      'description': 'A JavaScript-implemented Pokedex leveraging REST API.',
-      'path': 'https://stefan-herrmann.developerakademie.net/Pokedex',
-      'github': 'https://github.com/StefanHerrmann1991/Pokedex',
-      'img': 'assets/img/projects/pokedex.jpg',
-      'technologies': 'JavaScript | HTML | SASS | Api'
-    },
   ]
   showProjects(project: string) {
 

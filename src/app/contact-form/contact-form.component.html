@@ -1,5 +1,6 @@
 <img class="triangle" src="assets/img/icons/triangle.png">
-<div [ngClass]="{'email-delivered': isDelivered, 'hide' : !isDelivered}"> Your E-Mail was successfully delivered. Thank you for consulting me.</div>
+<div [ngClass]="{'email-delivered': isDelivered, 'hide' : !isDelivered}"> Your E-Mail was successfully delivered. Thank
+    you for consulting me.</div>
 <h2 class="greeting">Say hi</h2>
 <div class="main" id="contactForm" [ngClass]="{'hide-content': displayService.showH2Only$ | async}">
     <h3>Want to discuss a new project?</h3>
@@ -26,20 +27,27 @@
                 <img src="assets/img/icons/invalid.png" *ngIf="messageModel.invalid && messageModel.touched"
                     class="invalid">
             </div>
+            <div class="privacy-policy">
+                <div class="hover-div">
+                    <button class="privacy-btn" type="button" (click)="togglePrivacyPolicy()"
+                        [class.checked]="agreePrivacyPolicy" [attr.aria-pressed]="agreePrivacyPolicy" #privacyBtn>
+                        <div class="checkmark" *ngIf="agreePrivacyPolicy">&#x2713;</div>
+                    </button>
+                </div>
+                <div>
+                    <div>I've read the <a routerLink="/legal-notice" routerLinkActive="active">privacy policy</a> and
+                        agree
+                        to the processing of my data as outlined.</div>
+                    <div *ngIf="!agreePrivacyPolicy && privacyPolicyTouched" class="error-message">
+                        You must agree to the privacy policy to proceed.
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="btn-container">
             <div class="desktop"></div>
-            <button class="send-btn" #sendButton>
-                <div [ngClass]="{'hide' : !isLoading}">
-                    <div class="spinner">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                      </div>
-                </div>
+            <button class="send-btn" #sendButton [disabled]="!agreePrivacyPolicy || myForm.invalid">
+
                 <div [ngClass]="{'hide' : isLoading}">Send Message</div>
             </button>
             <a href="#pagesHead" class="desktop" (mouseenter)="changeImageSource(true)"
@@ -47,8 +55,20 @@
                 <img class="arrow-up" [src]="imageSource">
             </a>
         </div>
-      
-          
+
+
     </form>
+</div>
+<div [ngClass]="{'hide' : !isLoading}">
+    <div class="loading-screen">
+        <div class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 </div>
 <app-footer></app-footer>

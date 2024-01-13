@@ -9,7 +9,6 @@ import { DisplayService } from '../display.service';
   styleUrls: ['./contact-form.component.sass']
 })
 export class ContactFormComponent implements OnInit, AfterViewInit {
-  // Declaring properties for the form fields
   name: string = '';
   email: string = '';
   message: string = '';
@@ -18,6 +17,11 @@ export class ContactFormComponent implements OnInit, AfterViewInit {
 
   isLoading: boolean = false;
   isDelivered: boolean = false;
+  agreePrivacyPolicy: boolean = false;
+  formSubmitted: boolean = false;
+  privacyPolicyInteracted: boolean = false;
+  privacyPolicyTouched: boolean = false;
+  imageSource = 'assets/img/icons/arrowWhite.png';
 
   constructor(public displayService: DisplayService) { }
 
@@ -25,12 +29,29 @@ export class ContactFormComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-      }
+  }
+
+
+  togglePrivacyPolicy() {
+    if (this.agreePrivacyPolicy) {   
+      this.privacyPolicyInteracted = true;
+    }
+    this.agreePrivacyPolicy = !this.agreePrivacyPolicy;
+    this.privacyPolicyTouched = true;   
+    if (!this.agreePrivacyPolicy) {
+      this.formSubmitted = true;
+    }
+  }
 
 
 
-  imageSource = 'assets/img/icons/arrowWhite.png';
-
+  onSubmit() {
+    if (this.agreePrivacyPolicy) {
+      // Proceed with form submission logic
+    } else {
+      this.formSubmitted = true;
+    }
+  }
 
 
   changeImageSource(hovered: boolean): void {

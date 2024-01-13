@@ -1,5 +1,18 @@
 @import '../../styles.sass'
 
+.loading-screen
+    display: flex
+    justify-content: center
+    align-items: center
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.5)
+    z-index: 9999
+  
+
 #pagesHead img
     transition: transform 5s
 
@@ -21,46 +34,57 @@ div
         font-weight: bold
         transform: scaleX(1.1)
 
-input, textarea
-    background-color: black
-    border: none
-    width: calc( 100% - 42px )
-    color: #FFFCF3
-    font-size: 16px
-    margin-bottom: $ml
-    outline: $border-transparent
-    border-bottom: 2px solid #FFFCF3
-
-input:active, input:focus, textarea:active, textarea:focus
-    background-color: black !important
-    color: white !important
-
-input:-webkit-autofill, textarea:-webkit-autofill
-    background-color: black !important
-    -webkit-box-shadow: 0 0 0 1000px black inset
-    color: white !important
-    -webkit-text-fill-color: white !important
-textarea
-    height: 200px
-    font-family: overpass
-    resize: none
-    padding-top: 10.5px
-    padding-bottom: 10.5px
-    padding-left: 25px
-input
-    padding-top: 10.5px
-    padding-left: 25px
-    padding-bottom: 10.5px
-
-input:focus, textarea:focus
-    outline: $border-white
-    border-bottom: 2px solid transparent
+button.send-btn:disabled
+    border: 4px solid #BBB
+    opacity: 0.3
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15)
+    pointer-events: none
+    &:hover
+        border: 4px solid #BBB
+        opacity: 0.3
+        box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15)
+        font-weight: normal
+        transform: scaleX(1.0)
 
 .contact-data
     padding-left: $s
     padding-right: $s
     position: relative
     margin-top: 52px
+    input, textarea
+        background-color: black
+        border: none
+        width: calc( 100% - 42px )
+        color: #FFFCF3
+        font-size: 16px
+        margin-bottom: $ml
+        outline: $border-transparent
+        border-bottom: 2px solid #FFFCF3
+
+    input:active, input:focus, textarea:active, textarea:focus
+        background-color: black !important
+        color: white !important
+
+    input:-webkit-autofill, textarea:-webkit-autofill
+        background-color: black !important
+        -webkit-box-shadow: 0 0 0 1000px black inset
+        color: white !important
+        -webkit-text-fill-color: white !important
+    textarea
+        height: 200px
+        font-family: overpass
+        resize: none
+        padding-top: 10.5px
+        padding-bottom: 10.5px
+        padding-left: 25px
+    input
+        padding-top: 10.5px
+        padding-left: 25px
+        padding-bottom: 10.5px
+
+    input:focus, textarea:focus
+        outline: $border-white
+        border-bottom: 2px solid transparent
 
 h3
     font-family: 'Overpass'
@@ -87,6 +111,8 @@ h3
         width: 100%
 
 .arrow-up
+    position: absolute
+    right: 0
     width: 53px
     height: 76px
 
@@ -94,6 +120,7 @@ h3
     width: 100%
     display: flex
     justify-content: center
+    position: relative
 
     .send-btn
         border: 2px solid #FFFCF3
@@ -114,6 +141,49 @@ h3
 
 .hide
     display: none
+
+.error-message
+    color: red
+    font-size: 14px
+    margin-top: 5px
+
+.privacy-policy
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    gap: 8px
+    margin: 12px 0px 12px 0px
+    div
+        font-size: 14px
+    a
+        font-size: 14px
+        color: $secondary
+        text-decoration: none
+        transition: 0.3s
+        &:hover
+            font-size: 16px
+
+.privacy-btn
+    width: 25px
+    height: 25px
+    background-color: transparent
+    border: 2px solid white
+    position: relative
+
+.checkmark
+    position: absolute
+    font-size: 25px !important
+    top: -7px
+    left: 2px
+
+.hover-div
+    border-radius: 50%
+    width: 25px
+    height: 25px
+    padding: 5px
+    &:hover
+        background-color: $secondary
 
 .email-delivered
     position: absolute
@@ -175,9 +245,12 @@ h3
 
     .btn-container
         justify-content: space-between
-
-    input, textarea
-        width: calc( 100% - 21px )
+        .send-btn
+            font-size: 32px
+            padding: 20px 10px
+    .contact-data
+        input, textarea
+            width: calc( 100% - 21px )
 
     h2
         text-align: left !important
