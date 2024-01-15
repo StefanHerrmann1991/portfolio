@@ -29,8 +29,7 @@ export class ProjectsComponent implements OnInit {
     if (window.innerWidth <= 768) {
       const tags = this.el.nativeElement.querySelectorAll('.project-number');
       tags.forEach((tag, index) => {
-        if (this.isInViewport(tag)) this.isHovering[index] = true;
-      
+        if (this.isInViewport(tag)) this.isHovering[index] = true;      
       });
     }
   }
