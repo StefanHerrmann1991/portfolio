@@ -79,9 +79,9 @@ export class ContactFormComponent implements OnInit, AfterViewInit {
     this.email = "";
     this.message = "";
 
-    this.myForm.controls['name'].enable();
+/*     this.myForm.controls['name'].enable();
     this.myForm.controls['email'].enable();
-    this.myForm.controls['message'].enable();
+    this.myForm.controls['message'].enable(); */
 
     this.isLoading = false;
     this.isDelivered = true;

@@ -30,7 +30,7 @@ export class ProjectsComponent implements OnInit {
       const tags = this.el.nativeElement.querySelectorAll('.project-number');
       tags.forEach((tag, index) => {
         if (this.isInViewport(tag)) this.isHovering[index] = true;
-        else this.isHovering[index] = false;
+      
       });
     }
   }
@@ -67,30 +67,19 @@ export class ProjectsComponent implements OnInit {
     {
       'name': 'Join',
       'description': 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      'path': 'https://join.stefan-herrmann.org/Join/main/00login-register/login.html',
+      'path': 'https://join.stefan-herrmann.org/main/00login-register/login.html',
       'github': 'https://github.com/StefanHerrmann1991/Join',
       'img': 'assets/img/projects/join.png',
       'technologies': 'JavaScript | HTML | SASS'
     }, {
       'name': 'Portfolio',
       'description': 'An Angular-developed portfolio showcasing personal work.',
-      'path': 'https://stefan-herrmann.developerakademie.net/stefan-herrmann/',
+      'path': 'https://portfolio.stefan-herrmann.org/',
       'github': 'https://github.com/StefanHerrmann1991/portfolio',
       'img': 'assets/img/projects/portfolio.png',
       'technologies': 'Angular | TypeScript | SASS'
     }
   ]
-  showProjects(project: string) {
-
-    if (project == 'Angular')
-      this.actualProject = 'JavaScript';
-    if (project == 'JavaScript')
-      this.actualProject = 'Angular';
-    if (project == 'All')
-      this.actualProject = 'All';
-    this.console.log(this.actualProject, project);
-  }
-
 }
 
 

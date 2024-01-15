@@ -1,6 +1,4 @@
 <img class="triangle" src="assets/img/icons/triangle.png">
-<div [ngClass]="{'email-delivered': isDelivered, 'hide' : !isDelivered}"> Your E-Mail was successfully delivered. Thank
-    you for consulting me.</div>
 <h2 class="greeting">Say hi</h2>
 <div class="main" id="contactForm" [ngClass]="{'hide-content': displayService.showH2Only$ | async}">
     <h3>Want to discuss a new project?</h3>
@@ -46,9 +44,10 @@
         </div>
         <div class="btn-container">
             <div class="desktop"></div>
-            <button class="send-btn" #sendButton [disabled]="isLoading || isDelivered || !agreePrivacyPolicy" (click)="sendMail()">
+            <button class="send-btn" [ngClass]="{'success-btn' : isDelivered}" #sendButton
+                [disabled]="isLoading || isDelivered || !agreePrivacyPolicy" (click)="sendMail()">
                 <div *ngIf="!isDelivered" [ngClass]="{'hide' : isLoading}">Send Message</div>
-                <div *ngIf="isDelivered" class="email-sent-indicator">                  
+                <div *ngIf="isDelivered" class="email-sent-indicator">
                     ✓ Email Sent
                 </div>
             </button>

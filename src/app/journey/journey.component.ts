@@ -16,8 +16,7 @@ export class JourneyComponent implements OnInit {
   }
 
   journeys = [{
-    'text': "I'm Stefan Herrmann, a Front-end Developer with a Master in Life Science Engineering. I developed an analytical and structured mindset, realizing the potential of algorithms in solving problems. Focused on explosives, cell culture, and immunological testing, I thrived in data analysis and statistical discussions on the computer. I joined the Developer Akademie for professional guidance and to create high-quality code, combining the best of research with greater speed."
+    'text': "My name is Stefan Herrmann, a Front-end Developer with a comprehensive background in Life Science Engineering. My educational path has shaped a keen analytical mind, especially adept in algorithm-based problem solving. With a focus on explosives, cell culture, and immunological testing, my expertise in data analysis and statistical discussions has flourished. Through my engagement with the Developer Akademie, I am committed to developing high-quality code, blending the best of research with modern programming methodologies."
   }
-
   ]
 }
