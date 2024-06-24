@@ -50,7 +50,7 @@ export class ProjectsComponent implements OnInit {
     {
       'name': 'DA-Bubble',
       'description': 'An Angular based Slack-Clone.',
-      'path': 'https://da-bubble.stefan-herrmann.org/login',
+      'path': 'https://da-bubble.stefan-herrmann.org/',
       'github': 'https://github.com/StefanHerrmann1991/DA-Bubble',
       'img': 'assets/img/projects/da-bubble.png',
       'technologies': 'Angular | TypeScript | Firebase | SCSS | Angular Material'
